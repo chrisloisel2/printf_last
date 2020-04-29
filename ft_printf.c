@@ -74,6 +74,7 @@ void		ft_azero(t_buffer *buf)
 		ft_add('0', &str);
 	}
 	ft_free_strjoin(str, buf->str + buf->flag + buf->negatif, &buf->str);
+	free(str);
 }
 
 void		ft_pdc(const char *s, va_list ap, t_buffer *buf)

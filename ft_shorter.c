@@ -93,6 +93,7 @@ void		ft_zerotwo(const char *s, va_list ap, t_buffer *buf, int y)
 			}
 //			printf("str=%s, str1=%s, neg=%d\n", buf->str, buf->str1, buf->negatif);
 			ft_free_strjoin(str, buf->str + i, &buf->str);
+			free(str);
 //			printf("str=%s, str1=%s, neg=%d\n", buf->str, buf->str1, buf->negatif);
 		}
 		else
