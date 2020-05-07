@@ -6,7 +6,7 @@
 /*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/29 14:43:27 by lchristo          #+#    #+#             */
-/*   Updated: 2020/05/07 01:16:32 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/05/07 21:21:07 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int		main(void)
 	int		z = 1;
 	int		iop = 1;
 
-
+/*
 	ft_printf("Simple input test");
 	printf("T%d\n", iop);
 	iop++;
@@ -283,12 +283,13 @@ int		main(void)
 			b++;
 		}
 		a++;
-	}				
+	}*/			
 	printf("\n");
 	ft_printf("%u, %x, %X, %u, %x, %X, %u, %x, %X, %u, %x, %X, %u, %x, %X, %u, %x, %X, %u, %x, %X, %u, %x, %X\n", i, i, i, j, j, j, k, k, k, l, l, l, m, m, m, c, c, c, d, d, d, e, e, e); //T214
 	printf("%u, %x, %X, %u, %x, %X, %u, %x, %X, %u, %x, %X, %u, %x, %X, %u, %x, %X, %u, %x, %X, %u, %x, %X\n", i, i, i, j, j, j, k, k, k, l, l, l, m, m, m, c, c, c, d, d, d, e, e, e); //T214
 	printf("\n");
 	a = -1;
+	/*
 	while (a < 5) //T214-256
 	{
 		ft_printf("%*u, %*x, %*X, %*u, %*x, %*X, %*u, %*x, %*X, %*u, %*x, %*X, %*u, %*x, %*X, %*u, %*x, %*X, %*u, %*x, %*X, %*u, %*x, %*X\n", a, i, a, i, a, i, a, j, a, j, a, j, a, k, a, k, a, k, a, l, a, l, a, l, a, m, a, m, a, m, a, c, a, c, a, c, a, d, a, d, a, d, a, e, a, e, a, e);
@@ -305,6 +306,7 @@ int		main(void)
 	printf("\n");
 		a++;
 	}
+	*/
 	a = -1;
 
 	return (0);
