@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 05:23:55 by lchristo          #+#    #+#             */
-/*   Updated: 2020/05/07 00:34:13 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/05/07 18:46:32 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ void	ft_putnbr(int n, t_buffer *buf, const char *s)
 	int		len;
 	long	nb;
 
+	nb = 0;
 	nb = (long)n;
 	len = (nb < 0) ? ft_intlen(-nb) : ft_intlen(nb);
 	(nb < 0) ? ft_add('-', &buf->str) : 0;
@@ -71,6 +72,7 @@ void	ft_putnbr2(int n, t_buffer *buf)
 	unsigned int	nb;
 
 	nb = n;
+	len = ft_intlen(nb);
 	(nb == 0) ? ft_add('0', &buf->str) : 0;
 	while (len > 0)
 	{
