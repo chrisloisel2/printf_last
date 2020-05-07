@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 01:38:40 by lchristo          #+#    #+#             */
-/*   Updated: 2020/04/28 06:47:41 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/05/07 01:51:22 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,46 +79,63 @@ void		ft_azero(t_buffer *buf)
 
 void		ft_pdc(const char *s, va_list ap, t_buffer *buf)
 {
-	int		i;
+	int	i;
 
-	i = ft_strlen(buf->str);
-	buf->cpt1 = ft_atoi(s + buf->i);
-	buf->i += ft_intlen(buf->cpt1);
 	buf->str1 = ft_strcpy(buf->str, ft_strlen(buf->str), 0);
-	(!(s[buf->i] == '.')) ? ft_var(s, ap, buf) : 0;
-	if (s[buf->i] == '.')
-	{
-		buf->i++;
-		buf->cpt2 = ft_atoi(s + buf->i);
-		buf->i += ft_intlen(buf->cpt2);
-		buf->flag = ft_strlen(buf->str);
-		ft_var(s, ap, buf);
-		buf->d = ft_strlen(buf->str) - i;
-		(ft_test(s, buf->i)) ? ft_calculus(buf) : ft_dividus(buf);
-		(ft_test(s, buf->i)) ? ft_azero(buf) : ft_pdc_dot(buf);
-	}
-	else
-		ft_calculus(buf);
-//	(buf->d == 0)? buf->cpt1-- : 0;
+	i = ft_strlen(buf->str);
+	ft_cpt1(s, ap, buf);
+	(ft_flag(s[buf->i])) ? buf->pres = buf->i : 0;
+	(ft_flag(s[buf->i])) ? buf->i++ : 0;
+	ft_cpt2(s, ap, buf);
+	buf->flag = ft_strlen(buf->str);
+	ft_var(s, ap, buf);
+	(s[buf->i] == 's') ? ft_shorter_minus(s, buf) : 0;
+	ft_zerosupp(buf);
+	ft_calculus(buf);
+	(!ft_flag(s[buf->pres] && buf->rb2 == 0)) ? ft_varus(s, buf) : 0;
 	while (buf->cpt1-- > 0)
-		ft_add(' ', &buf->str1);
-	ft_free_strjoin(buf->str1, buf->str + i, &buf->str);
+		(buf->rb) ? ft_add(' ', &buf->str) : ft_add(' ', &buf->str1);
+	(!buf->rb) ? ft_free_strjoin(buf->str1, buf->str + i, &buf->str) : 0;
 	free(buf->str1);
+}
+
+int			ft_exu(char c)
+{
+	int i;
+
+	i = 0;
+	i += (c == 'p') ? 1 : 0;
+	i += (c == 'X') ? 1 : 0;
+	i += (c == 'x') ? 1 : 0;
+	i += (c == 'u') ? 1 : 0;
+	i += (c == 'd') ? 1 : 0;
+	i += (c == 'i') ? 1 : 0;
+	i += (c == 'c') ? 1 : 0;
+	i += (c == '%') ? 1 : 0;
+	return (i);
+}
+
+void		ft_errors(const char *s, t_buffer *buf)
+{
+	while (ft_flag(s[buf->i]) && ft_flag(s[buf->i + 1]) && s[buf->i + 1] != '*')
+		buf->i++;
+	if (ft_flag(s[buf->i]) && ft_exu(s[buf->i + 1]) && s[buf->i] != '*')
+			buf->i++;
 }
 
 void		ft_var(const char *s, va_list ap, t_buffer *buf)
 {
-	(s[buf->i] == '0' && s[buf->i + 1] == '-') ? buf->i++ : 0;
-	(s[buf->i] == 'p') ? ft_point(va_arg(ap, void *), buf) : 0;
+	ft_errors(s, buf);
+//	printf("[%c]\n", s[buf->i]);
 	(s[buf->i] == 'X') ? ft_putnbr4(va_arg(ap, void *), buf) : 0;
 	(s[buf->i] == 'x') ? ft_putnbr3(va_arg(ap, void *), buf) : 0;
 	(s[buf->i] == 'u') ? ft_putnbr2(va_arg(ap, unsigned int), buf) : 0;
-	(s[buf->i] == 'd') ? ft_putnbr(va_arg(ap, int), buf) : 0;
-	(s[buf->i] == 'i') ? ft_putnbr(va_arg(ap, int), buf) : 0;
+	(s[buf->i] == 'd') ? ft_putnbr(va_arg(ap, int), buf, s) : 0;
+	(s[buf->i] == 'i') ? ft_putnbr(va_arg(ap, int), buf, s) : 0;
 	(s[buf->i] == 's') ? ft_putstr(va_arg(ap, char *), buf) : 0;
 	(s[buf->i] == 'c') ? ft_add(va_arg(ap, int), &buf->str) : 0;
 	(s[buf->i] == '%') ? ft_add('%', &buf->str) : 0;
-	(s[buf->i] == '*') ? ft_star(s, ap, buf) : 0;
+	(s[buf->i] == '*') ? ft_pdc(s, ap, buf) : 0;
 	(s[buf->i] == '-') ? ft_shorter(s, ap, buf) : 0;
 	(s[buf->i] == '0') ? ft_zero(s, ap, buf) : 0;
 	(s[buf->i] == '.') ? ft_dot(s, ap, buf) : 0;
@@ -140,6 +157,7 @@ char		*ft_snif(const char *s, va_list ap, t_buffer buf)
 		}
 		else
 			ft_add(s[buf.i], &buf.str);
+		ft_clean(&buf);
 		buf.i++;
 	}
 	return (buf.str);

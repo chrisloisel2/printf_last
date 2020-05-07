@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 14:15:37 by lchristo          #+#    #+#             */
-/*   Updated: 2020/03/11 15:31:07 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/05/07 01:52:20 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ void		ft_putnbr3(void *n, t_buffer *buf)
 
 	nb = (long)n;
 	len = ft_intlen2(nb) - 1;
+	(nb == 0) ? ft_add('0', &buf->str) : 0;
 	while (len >= 0)
 	{
 		if ((nb / ft_cube2(len) <= 16) && (nb / ft_cube2(len) > 9))
@@ -65,16 +66,14 @@ void		ft_putnbr3(void *n, t_buffer *buf)
 		len--;
 	}
 }
-
+ 
 void		ft_putnbr4(void *n, t_buffer *buf)
 {
 	int		len;
 	long	nb;
 
-	if ((long)n < 0)
-		nb = (long)n * (-1);
-	else
-		nb = (long)n;
+	nb = (long)n;
+	(nb == 0) ? ft_add('0', &buf->str) : 0;
 	len = (nb < 0) ? (ft_intlen2(-nb) - 1) : (ft_intlen2(nb) - 1);
 	while (len >= 0)
 	{

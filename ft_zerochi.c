@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 19:37:18 by lchristo          #+#    #+#             */
-/*   Updated: 2020/04/25 07:39:05 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/05/05 22:37:23 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,9 @@
 void		ft_minus(const char *s, va_list ap, t_buffer *buf)
 {
 	int	t;
-	int	i;
 	int cp;
 
 	t = buf->i;
-	i = 0;
 	(buf->cpt1 < 0) ? buf->cpt1 *= -1 : 0;
 	if (ft_flag(s[buf->i]))
 	{
@@ -61,13 +59,11 @@ void		ft_varius(const char *s, t_buffer *buf)
 	free(str);
 }
 
-void		ft_varus(const char *s, va_list ap, t_buffer *buf)
+void		ft_varus(const char *s, t_buffer *buf)
 {
-	buf->i = buf->i + ft_intlen(ft_atoi(s + buf->i));
-	(s[buf->i] == '*') ? ft_star(s, ap, buf) : 0;
-	(s[buf->i] == '-') ? ft_shorter2(s, buf) : 0;
-	(s[buf->i] == '.') ? ft_dot2(s, buf) : 0;
-	va_end(ap);
+	(s[buf->pres] == '.') ? ft_dot2(buf) : 0;
+//	va_end(ap);
+	//(s[buf->pres] == '-') ? ft_shorter2(s, buf) : 0;
 }
 
 void		ft_star(const char *s, va_list ap, t_buffer *buf)

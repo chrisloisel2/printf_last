@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 05:23:55 by lchristo          #+#    #+#             */
-/*   Updated: 2020/04/23 05:12:46 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/05/07 00:34:13 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,15 @@ int		ft_intlen(long c)
 	return (p);
 }
 
-void	ft_putnbr(int n, t_buffer *buf)
+void	ft_zeru(t_buffer *buf, const char *s)
+{
+	if (!(s[buf->i - 1] == '.' || (s[buf->i - 2] == '.' && s[buf->i - 1] == '0')))
+	{
+		ft_add('0', &buf->str);
+	}
+}
+
+void	ft_putnbr(int n, t_buffer *buf, const char *s)
 {
 	int		len;
 	long	nb;
@@ -48,7 +56,7 @@ void	ft_putnbr(int n, t_buffer *buf)
 	(nb < 0) ? ft_add('-', &buf->str) : 0;
 	(nb < 0) ? buf->negatif = 1 : 0;
 	nb = (nb < 0) ? -nb : nb;
-	(nb == 0) ? ft_add('0', &buf->str) : 0;
+	(nb == 0) ? ft_zeru(buf, s) : 0;
 	while (len > 0)
 	{
 		len--;
@@ -64,7 +72,6 @@ void	ft_putnbr2(int n, t_buffer *buf)
 
 	nb = n;
 	(nb == 0) ? ft_add('0', &buf->str) : 0;
-	len = (nb < 0) ? ft_intlen(-nb) : ft_intlen(nb);
 	while (len > 0)
 	{
 		len--;
