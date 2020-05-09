@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 02:00:33 by lchristo          #+#    #+#             */
-/*   Updated: 2020/05/06 23:54:06 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/05/09 04:42:48 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,9 @@ char			*ft_strjoin(char *s1, char *s2);
 void			ft_free_strjoin(char *s1, char *s2, char **leaks);
 void			ft_add(char s, char **str);
 int				ft_strlen(const char *s);
-void			ft_putnbr4(void *n, t_buffer *buf);
+void			ft_putnbr4(va_list ap, t_buffer *buf);
 int				ft_isalnum(int c);
-void			ft_putnbr3(void *n, t_buffer *buf);
+void			ft_putnbr3(va_list ap, t_buffer *buf);
 void			ft_var(const char *s, va_list ap, t_buffer *buf);
 int				ft_test(const char *s, int trd);
 void			ft_shorter(const char *s, va_list ap, t_buffer *buf);

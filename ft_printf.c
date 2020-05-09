@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 01:38:40 by lchristo          #+#    #+#             */
-/*   Updated: 2020/05/07 01:51:22 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/05/09 04:45:27 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,8 +127,8 @@ void		ft_var(const char *s, va_list ap, t_buffer *buf)
 {
 	ft_errors(s, buf);
 //	printf("[%c]\n", s[buf->i]);
-	(s[buf->i] == 'X') ? ft_putnbr4(va_arg(ap, void *), buf) : 0;
-	(s[buf->i] == 'x') ? ft_putnbr3(va_arg(ap, void *), buf) : 0;
+	(s[buf->i] == 'X') ? ft_putnbr4(ap, buf) : 0;
+	(s[buf->i] == 'x') ? ft_putnbr3(ap, buf) : 0;
 	(s[buf->i] == 'u') ? ft_putnbr2(va_arg(ap, unsigned int), buf) : 0;
 	(s[buf->i] == 'd') ? ft_putnbr(va_arg(ap, int), buf, s) : 0;
 	(s[buf->i] == 'i') ? ft_putnbr(va_arg(ap, int), buf, s) : 0;

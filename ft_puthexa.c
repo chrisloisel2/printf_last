@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 14:15:37 by lchristo          #+#    #+#             */
-/*   Updated: 2020/05/07 18:51:58 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/05/09 04:44:53 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,12 @@ t_buffer	ft_divide(t_buffer val)
 	return (val);
 }
 
-void		ft_putnbr3(void *n, t_buffer *buf)
+void		ft_putnbr3(va_list ap, t_buffer *buf)
 {
 	long	nb;
 	int		len;
 
-	nb = (long)n;
+	nb = va_arg(ap, long);
 	len = ft_intlen2(nb) - 1;
 	(nb == 0) ? ft_add('0', &buf->str) : 0;
 	while (len >= 0)
@@ -67,12 +67,12 @@ void		ft_putnbr3(void *n, t_buffer *buf)
 	}
 }
  
-void		ft_putnbr4(void *n, t_buffer *buf)
+void		ft_putnbr4(va_list ap, t_buffer *buf)
 {
 	int		len;
 	long	nb;
 
-	nb = (long)n;
+	nb = va_arg(ap, long);
 	(nb == 0) ? ft_add('0', &buf->str) : 0;
 	len = (nb < 0) ? (ft_intlen2(-nb) - 1) : (ft_intlen2(nb) - 1);
 	while (len >= 0)
