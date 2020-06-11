@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 00:28:25 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/11 05:02:57 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/11 05:12:18 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 void		ft_star(const char *s, va_list *ap,  t_pft *one)
 {
-	ft_get_pres1(s, ap, one);
-	ft_get_flag(s, ap, one);
-	ft_get_pres2(s, ap, one);
-	ft_get_var(s, ap, one);
+	ft_get_all(s, ap, one);
 //	printf("->%d\n->%d\n->%c\n->(%s)\n", one->pres1, one->pres2, one->flag, one->result);
 	if (one->pres1neg == 0)
 	{

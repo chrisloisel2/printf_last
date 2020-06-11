@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 02:00:33 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/11 04:40:34 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/11 05:18:34 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int				ft_intlen(long c);
 int				ft_atoi(const char *str);
 void			ft_get_pres1(const char *s, va_list *ap, t_pft *one);
 void			ft_get_pres2(const char *s, va_list *ap, t_pft *one);
-void			ft_get_flag(const char *s, va_list *ap, t_pft *one);
+void			ft_get_flag(const char *s, t_pft *one);
 void			ft_get_var(const char *s, va_list *ap, t_pft *one);
 void			ft_star(const char *s, va_list *ap,  t_pft *one);
 void			ft_get_putnbr(int nb, t_pft *one);
@@ -56,5 +56,6 @@ void			ft_get_point(unsigned long p, t_pft *one);
 void			ft_free_strjoin(char *s1, char *s2, char **leaks);
 char			*ft_strjoin(char *s1, char *s2);
 int				ft_strlen(const char *s);
+void			ft_get_all(const char *s, va_list *ap, t_pft *one);
 
 #endif

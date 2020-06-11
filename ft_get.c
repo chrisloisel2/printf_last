@@ -6,11 +6,19 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 00:29:23 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/11 04:34:00 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/11 05:17:47 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+void		ft_get_all(const char *s, va_list *ap, t_pft *one)
+{
+	ft_get_pres1(s, ap, one);
+	ft_get_flag(s, one);
+	ft_get_pres2(s, ap, one);
+	ft_get_var(s, ap, one);
+}
 
 void		ft_get_pres1(const char *s, va_list *ap, t_pft *one)
 {
@@ -52,7 +60,7 @@ void		ft_get_pres2(const char *s, va_list *ap, t_pft *one)
 	}
 }
 
-void		ft_get_flag(const char *s, va_list *ap, t_pft *one)
+void		ft_get_flag(const char *s, t_pft *one)
 {
 	if (s[one->index] == '.')
 	{
@@ -85,10 +93,10 @@ void		ft_get_var(const char *s, va_list *ap, t_pft *one)
 		ft_get_putnbr(va_arg(*ap, int), one);
 	if (s[one->index] == 'i')
 		ft_get_putnbr(va_arg(*ap, int), one);
-	//if (s[one->index] == 's')
-//		ft_putstr(va_arg(*ap, char *), one);
-//	if (s[one->index] == 'c')
-//		ft_putchar(va_arg(*ap, int), one);
-//	if (s[one->index] == '%')
-//		ft_putchar('%', one);
+	if (s[one->index] == 's')
+		ft_get_putstr(va_arg(*ap, char *), one);
+	if (s[one->index] == 'c')
+		ft_get_putchar(va_arg(*ap, int), one);
+	if (s[one->index] == '%')
+		ft_get_putchar('%', one);
 }
