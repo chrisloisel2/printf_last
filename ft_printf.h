@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 02:00:33 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/12 00:04:31 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/12 01:35:21 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,8 @@ int				ft_strlen(const char *s);
 void			ft_get_all(const char *s, va_list *ap, t_pft *one);
 void			ft_calculus(t_pft *one);
 void			ft_dot(const char *s, va_list *ap, t_pft *one);
+int				ft_alpha(char c);
+void			ft_minus(const char *s, va_list *ap, t_pft *one);
+void			ft_zero(const char *s, va_list *ap, t_pft *one);
 
 #endif

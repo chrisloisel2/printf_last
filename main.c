@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/10 22:08:04 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/11 23:58:19 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/12 01:55:42 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ int		main(void)
 	char *s;
 	int g;
 
-	a = 123456789;
+	a = 5;
 	b = -123456789;
 	s = "abcdefghijklmnopqrst";
-	g = -55;
+	g = 50;
 
 	printf("abcdef\n");
 	ft_printf("abcdef\n");
@@ -39,24 +39,40 @@ int		main(void)
 	printf("%u\n", b);
 	ft_printf("%u\n", b);
 	printf("\n");
+	printf("------------------------------------------ft_star = *----------------------------------------\n");
 	printf("-%*d-\n", g, a);
 	ft_printf("-%*d-\n", g, a);
 	printf("\n");
 	printf("-%*d-\n", -g, a);
 	ft_printf("-%*d-\n", -g, a);
 	printf("\n");
-	printf("-%.*d-\n", g, 5);
-	ft_printf("-%.*d-\n", g, 5);
-//	printf("\n");
-//	printf("-%*-*d-\n", -g, 5, a);
-//	ft_printf("-%*-*d-\n", -g, 5, a);
-//	printf("\n");
-//	printf("-%*.8d-\n", g, a);
-//	ft_printf("-%5.8d-\n", g, a);
-//	printf("\n");
-//	printf("-%*-8d-\n", -g, a);
-//	ft_printf("-%*-8d-\n", -g, a);
-
+	printf("------------------------------------------ft_dot = .----------------------------------------\n");
+	printf("-%.*d-\n", g, a);
+	ft_printf("-%.*d-\n", g, a);
+	printf("\n");
+	printf("-%.*d-\n", -g, a);
+	ft_printf("-%.*d-\n", -g, a);
+	printf("\n");
+	printf("------------------------------------------ft_dot = 30---------------------------------------\n");
+	printf("-%30d-\n", a);
+	ft_printf("-%30d-\n", a);
+	printf("\n");
+	printf("-%30d-\n", a);
+	ft_printf("-%30d-\n", a);
+	printf("\n");
+	printf("------------------------------------------ft_minus = ----------------------------------------\n");
+	printf("-%-*d-\n", g, a);
+	ft_printf("-%-*d-\n", g, a);
+	printf("\n");
+	printf("-%-*d-\n", -g, a);
+	ft_printf("-%-*d-\n", -g, a);
+	printf("\n");
+	printf("------------------------------------------ft_zero = 0---------------------------------------\n");
+	printf("-%0*d-\n", g, a);
+	ft_printf("-%0*d-\n", g, a);
+	printf("\n");
+	printf("-%0*d-\n", -g, a);
+	ft_printf("-%0*d-\n", -g, a);
 //	while(1);
 	return (0);
 }

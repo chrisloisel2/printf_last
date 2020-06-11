@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 01:38:40 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/12 00:04:42 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/12 01:56:22 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,10 @@ void		ft_var(const char *s, va_list *ap, t_pft *one)
 	(s[one->index] == '%') ? ft_putchar('%', one) : 0;
 	(s[one->index] == '*') ? ft_star(s, ap, one) : 0;
 	(s[one->index] == '.') ? ft_dot(s, ap, one) : 0;
-//	(s[buf->i] == '-') ? ft_shorter(s, ap, buf) : 0;
-//	(s[buf->i] == '0') ? ft_zero(s, ap, buf) : 0;
-//	(ft_alpha(s[buf->i])) ? ft_pdc(s, ap, buf) : 0;
-//	(s[buf->i] == '\0') ? buf->i-- : 0;
+	(s[one->index] == '-') ? ft_minus(s, ap, one) : 0;
+	(s[one->index] == '0') ? ft_zero(s, ap, one) : 0;
+	(ft_alpha(s[one->index])) ? ft_star(s, ap, one) : 0;
+	(s[one->index] == '\0') ? one->index-- : 0;
 }
 
 void	ft_detection(const char *s, va_list *ap, t_pft *one)

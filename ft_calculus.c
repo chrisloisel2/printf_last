@@ -6,7 +6,7 @@
 /*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 22:57:15 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/11 23:53:10 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/12 00:59:32 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	ft_calculus(t_pft *one)
 	cp = 0;
 	(one->pres2 == 1) ? one->pres2 = 0 : 0;
 	cp = ft_strlen(one->result) - one->resultneg;
-//	printf("\npres->[%d][%d]flag->[%c]result->(%s)||\n", one->pres1, one->pres2, one->flag, one->result);
-//	printf("\n[%d]flag->[%c]result->(%s)||\n", one->resultneg, one->flag, one->result);
 	if (one->pres1 > 0)
 		one->pres1 -= one->resultneg;
 	one->pres1 -= one->pres2;

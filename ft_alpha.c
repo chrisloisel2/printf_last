@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dot.c                                           :+:      :+:    :+:   */
+/*   ft_alpha.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/11 23:59:48 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/12 01:57:00 by lchristo         ###   ########.fr       */
+/*   Created: 2020/06/12 01:14:15 by lchristo          #+#    #+#             */
+/*   Updated: 2020/06/12 01:16:42 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_dot(const char *s, va_list *ap, t_pft *one)
+int		ft_alpha(char c)
 {
-	one->index++;
-	ft_get_all(s, ap, one);
-	if (one->resultneg == 1)
-	{
-		ft_putchar('-', one);
-		one->pres1++;
-	}
-	while (one->pres1-- > 0 && one->pres1neg == 0)
-		ft_putchar('0', one);
-	ft_putstr(one->result + one->resultneg, one);
-	free(one->result);
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }

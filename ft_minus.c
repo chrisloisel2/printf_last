@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dot.c                                           :+:      :+:    :+:   */
+/*   ft_minus.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/11 23:59:48 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/12 01:57:00 by lchristo         ###   ########.fr       */
+/*   Created: 2020/06/12 01:20:23 by lchristo          #+#    #+#             */
+/*   Updated: 2020/06/12 01:57:09 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_dot(const char *s, va_list *ap, t_pft *one)
+void	ft_minus(const char *s, va_list *ap, t_pft *one)
 {
 	one->index++;
 	ft_get_all(s, ap, one);
-	if (one->resultneg == 1)
-	{
-		ft_putchar('-', one);
-		one->pres1++;
-	}
-	while (one->pres1-- > 0 && one->pres1neg == 0)
-		ft_putchar('0', one);
-	ft_putstr(one->result + one->resultneg, one);
+	ft_putstr(one->result, one);
+	while (one->pres1-- > 0)
+		ft_putchar(' ', one);
 	free(one->result);
 }
