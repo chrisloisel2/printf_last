@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 01:38:40 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/11 01:48:50 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/11 04:43:17 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ void		ft_clean(t_pft *one)
 	one->pres1neg = 0;
 	one->pres2 = 0;
 	one->pres2neg = 0;
-	one->result = 0;
+	one->result = malloc(sizeof(char)* 1);
+	one->result[0] = '\0';
 	one->flag = 0;
 }
 

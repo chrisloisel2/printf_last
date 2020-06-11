@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 02:00:33 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/11 03:45:23 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/11 04:40:34 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct			s_pft
 	int		pres1neg;
 	int		pres2;
 	int		pres2neg;
-	int		result;
+	char	*result;
 	char 	flag;
 
 }			t_pft;
@@ -53,5 +53,8 @@ void			ft_get_puthexa_maj(long nb, t_pft *one);
 void			ft_get_putstr(char *s, t_pft *one);
 void			ft_get_putchar(char c, t_pft *one);
 void			ft_get_point(unsigned long p, t_pft *one);
+void			ft_free_strjoin(char *s1, char *s2, char **leaks);
+char			*ft_strjoin(char *s1, char *s2);
+int				ft_strlen(const char *s);
 
 #endif
