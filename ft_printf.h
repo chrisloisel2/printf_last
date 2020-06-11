@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 02:00:33 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/11 05:18:34 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/12 00:04:31 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct			s_pft
 	int		pres1neg;
 	int		pres2;
 	int		pres2neg;
+	int		resultneg;
 	char	*result;
 	char 	flag;
 
@@ -57,5 +58,7 @@ void			ft_free_strjoin(char *s1, char *s2, char **leaks);
 char			*ft_strjoin(char *s1, char *s2);
 int				ft_strlen(const char *s);
 void			ft_get_all(const char *s, va_list *ap, t_pft *one);
+void			ft_calculus(t_pft *one);
+void			ft_dot(const char *s, va_list *ap, t_pft *one);
 
 #endif

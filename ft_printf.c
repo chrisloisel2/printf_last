@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 01:38:40 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/11 04:43:17 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/12 00:04:42 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void		ft_clean(t_pft *one)
 	one->pres1neg = 0;
 	one->pres2 = 0;
 	one->pres2neg = 0;
+	one->resultneg = 0;
 	one->result = malloc(sizeof(char)* 1);
 	one->result[0] = '\0';
 	one->flag = 0;
@@ -36,9 +37,9 @@ void		ft_var(const char *s, va_list *ap, t_pft *one)
 	(s[one->index] == 'c') ? ft_putchar(va_arg(*ap, int), one) : 0;
 	(s[one->index] == '%') ? ft_putchar('%', one) : 0;
 	(s[one->index] == '*') ? ft_star(s, ap, one) : 0;
+	(s[one->index] == '.') ? ft_dot(s, ap, one) : 0;
 //	(s[buf->i] == '-') ? ft_shorter(s, ap, buf) : 0;
 //	(s[buf->i] == '0') ? ft_zero(s, ap, buf) : 0;
-//	(s[buf->i] == '.') ? ft_dot(s, ap, buf) : 0;
 //	(ft_alpha(s[buf->i])) ? ft_pdc(s, ap, buf) : 0;
 //	(s[buf->i] == '\0') ? buf->i-- : 0;
 }

@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/10 22:08:04 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/11 04:52:15 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/11 23:58:19 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,24 +26,34 @@ int		main(void)
 
 	printf("abcdef\n");
 	ft_printf("abcdef\n");
+	printf("\n");
 	printf("%s\n", s);
 	ft_printf("%s\n", s);
+	printf("\n");
 	printf("%d\n", a);
 	ft_printf("%d\n", a);
+	printf("\n");
 	printf("%u\n", a);
 	ft_printf("%u\n", a);
+	printf("\n");
 	printf("%u\n", b);
 	ft_printf("%u\n", b);
+	printf("\n");
 	printf("-%*d-\n", g, a);
 	ft_printf("-%*d-\n", g, a);
+	printf("\n");
 	printf("-%*d-\n", -g, a);
 	ft_printf("-%*d-\n", -g, a);
-//	printf("-%*.*d-\n", g, 8, a);
-//	ft_printf("-%*.*d-\n", g, 8, a);
+	printf("\n");
+	printf("-%.*d-\n", g, 5);
+	ft_printf("-%.*d-\n", g, 5);
+//	printf("\n");
 //	printf("-%*-*d-\n", -g, 5, a);
 //	ft_printf("-%*-*d-\n", -g, 5, a);
+//	printf("\n");
 //	printf("-%*.8d-\n", g, a);
-//	ft_printf("-%*.8d-\n", g, a);
+//	ft_printf("-%5.8d-\n", g, a);
+//	printf("\n");
 //	printf("-%*-8d-\n", -g, a);
 //	ft_printf("-%*-8d-\n", -g, a);
 

@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 00:29:23 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/11 05:17:47 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/11 23:47:14 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void		ft_get_all(const char *s, va_list *ap, t_pft *one)
 	ft_get_flag(s, one);
 	ft_get_pres2(s, ap, one);
 	ft_get_var(s, ap, one);
+	ft_calculus(one);
 }
 
 void		ft_get_pres1(const char *s, va_list *ap, t_pft *one)
@@ -31,7 +32,7 @@ void		ft_get_pres1(const char *s, va_list *ap, t_pft *one)
 	{
 		one->pres1 = ft_atoi(s + one->index);
 		one->index = one->index + ft_intlen(one->pres1);
-		one->index = (ft_intlen(one->pres1) == 0) ? 1 : 0;
+		one->index += (ft_intlen(one->pres1) == 0) ? 1 : 0;
 	}
 	if (one->pres1 < 0)
 	{
@@ -51,7 +52,7 @@ void		ft_get_pres2(const char *s, va_list *ap, t_pft *one)
 	{
 		one->pres2 = ft_atoi(s + one->index);
 		one->index = one->index + ft_intlen(one->pres2);
-		one->index = (ft_intlen(one->pres2) == 0) ? 1 : 0;
+		one->index += (ft_intlen(one->pres2) == 0) ? 1 : 0;
 	}
 	if (one->pres2 < 0)
 	{
