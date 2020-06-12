@@ -16,6 +16,7 @@ void	ft_get_puthexa(long nb, t_pft *one)
 {
 	char	*base_data;
 
+	one->display = 'x';
 	base_data = "0123456789abcdef";
 	if (nb < 0)
 	{
@@ -34,6 +35,7 @@ void	ft_get_puthexa_maj(long nb, t_pft *one)
 {
 	char	*base_data;
 
+	one->display = 'X';
 	base_data = "0123456789ABCDEF";	
 	if (nb < 0)
 	{
@@ -52,6 +54,7 @@ void	ft_get_putu(unsigned int nb, t_pft *one)
 {
 	char	*base_data;
 
+	one->display = 'u';
 	base_data = "0123456789";
 	if (nb >= 10)
 	{
@@ -64,6 +67,7 @@ void	ft_get_putnbr(int nb, t_pft *one)
 {
 	char	*base_data;
 
+	one->display = 'd';
 	base_data = "0123456789";
 	if (nb == -2147483648)
 	{

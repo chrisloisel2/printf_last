@@ -22,9 +22,11 @@ typedef struct			s_pft
 	int		cpt;
 	int		index;
 	int		pres1;
-	int		p1;
+	int		truepres1;
+	int		truepres2;
 	int		r;
 	int		decal;
+	int		p1;
 	int		p2;
 	int		pres1neg;
 	int		pres2;
@@ -33,6 +35,7 @@ typedef struct			s_pft
 	int		resaff;
 	char	*result;
 	char 	flag;
+	char	display;
 
 }			t_pft;
 
@@ -70,5 +73,8 @@ void			ft_minus(const char *s, va_list *ap, t_pft *one);
 void			ft_zero(const char *s, va_list *ap, t_pft *one);
 void			ft_flag(t_pft *one);
 void			ft_zerosupp(t_pft *one);
+int			ft_zerocal(t_pft *one);
+void			ft_cast_min(t_pft *one);
+void			ft_cast(t_pft *one);
 
 #endif

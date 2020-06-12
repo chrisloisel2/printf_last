@@ -16,6 +16,7 @@ void	ft_get_putstr(char *s, t_pft *one)
 {
 	int i;
 
+	one->display = 's';
 	i = 0;
 	while (s[i] != '\0')
 	{

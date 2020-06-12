@@ -42,7 +42,6 @@ int		main(void)
 
 
 
-/*
 	ft_printf("Simple input test\n\n");
 	ft_printf("%i, %d, %d, %d, %d, %s, %c, %d, %u, %x, %X\n", i, j, k, l, m, n, c, c, j, j, j); //T2
 	printf("%i, %d, %d, %d, %d, %s, %c, %d, %u, %x, %X\n", i, j, k, l, m, n, c, c, j, j, j); //T2
@@ -125,7 +124,7 @@ int		main(void)
 		printf("%.*i, %.*d, %.*d, %.*d, %.*d, %.*d, %.*d, %.*d\n", a, i, a, j, a, k, a, l, a, m, a, c, a, e, a, d);
 		a++;
 	}
-*/	a = -7;
+	a = -7;
 	while(a < 7) //T70-177
 	{
 		b = -7;
@@ -134,23 +133,23 @@ int		main(void)
 		//	printf("--------------A[%d]-----B[%d]                  %%-*.*i\n", a, b);
 		//	printf("[%-*.*d]\n", a, b, 45);
 		//	ft_printf("[%-*.*d]\n", a, b, 45);
-			printf("T[%d]-----A[%d]-----B[%d]                  %%-*.*i\n", iop, a, b);
-			iop++;
+		//	printf("T[%d]-----A[%d]-----B[%d]                  %%-*.*i\n", iop, a, b);
+		//	iop++;
 			ft_printf("%-*.*i, %-*.*d, %-*.*d, %-*.*d, %-*.*d, %-*.*d, %-*.*d, %-*.*d\n", a, b, i, a, b, j, a, b, k, a, b, l, a, b, m, a, b, c, a, b, e, a, b, d);
 			printf("%-*.*i, %-*.*d, %-*.*d, %-*.*d, %-*.*d, %-*.*d, %-*.*d, %-*.*d\n", a, b, i, a, b, j, a, b, k, a, b, l, a, b, m, a, b, c, a, b, e, a, b, d);	
-			printf("T[%d]-----A[%d]-----B[%d]                  %%*.*i\n", iop, a, b);
-			iop++;
+		//	printf("T[%d]-----A[%d]-----B[%d]                  %%*.*i\n", iop, a, b);
+		//	iop++;
 			ft_printf("%*.*i, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d\n", a, b, i, a, b, j, a, b, k, a, b, l, a, b, m, a, b, c, a, b, e, a, b, d);
 			printf("%*.*i, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d\n", a, b, i, a, b, j, a, b, k, a, b, l, a, b, m, a, b, c, a, b, e, a, b, d);
-			printf("T[%d]-----A[%d]-----B[%d]                  %%0*.*i\n", iop, a, b);
-			iop++;
+		//	printf("T[%d]-----A[%d]-----B[%d]                  %%0*.*i\n", iop, a, b);
+		//	iop++;
 			ft_printf("%0*.*i, %0*.*d, %0*.*d, %0*.*d, %0*.*d, %0*.*d, %0*.*d, %0*.*d\n", a, b, i, a, b, j, a, b, k, a, b, l, a, b, m, a, b, c, a, b, e, a, b, d);
 			printf("%0*.*i, %0*.*d, %0*.*d, %0*.*d, %0*.*d, %0*.*d, %0*.*d, %0*.*d\n", a, b, i, a, b, j, a, b, k, a, b, l, a, b, m, a, b, c, a, b, e, a, b, d);
 			b++;
 		}
 		a++;
 	}	
-	/*	a = 19;
+	a = 19;
 	b = 14;
 	ft_printf("%*.*i, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d\n", a, b, -42, a, b, 42, -a, -b, -42, -a, -b, 42, -a, b, -42, -a, b, 42, a, -b, -42, a, -b, 42); //T178
 	printf("%*.*i, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d\n", a, b, -42, a, b, 42, -a, -b, -42, -a, -b, 42, -a, b, -42, -a, b, 42, a, -b, -42, a, -b, 42); //T178
@@ -184,21 +183,25 @@ int		main(void)
 //	printf("\n");
 	ft_printf("%1.s, %1.s, %1.s, %1.s, %1.s\n", n, o, p, q, r); //T186
 	printf("%1.s, %1.s, %1.s, %1.s, %1.s\n", n, o, p, q, r);//T186
+	ft_printf("%5.s, %5.s, %5.s, %5.s, %5.s\n", n, o, p, q, r); //T186
+	printf("%5.s, %5.s, %5.s, %5.s, %5.s\n", n, o, p, q, r);//T186
+//	printf("\n");
 //	printf("\n");
 	a = -4;
 	while (a < 5) //T187-213
 	{
 		ft_printf("%*s, %*s, %*s, %*s, %*s, %*s, %*s, %*s\n", a, n, a, o, a, p, a, q, a, r, a, s, a, t, a, u);
 		printf("%*s, %*s, %*s, %*s, %*s, %*s, %*s, %*s\n", a, n, a, o, a, p, a, q, a, r, a, s, a, t, a, u);
+		printf("\n");
+	//	ft_printf("%-*s, %-*s, %-*s, %-*s, %-*s, %-*s, %-*s, %-*s\n", a, n, a, o, a, p, a, q, a, r, a, s, a, t, a, u);
+	//	printf("%-*s, %-*s, %-*s, %-*s, %-*s, %-*s, %-*s, %-*s\n", a, n, a, o, a, p, a, q, a, r, a, s, a, t, a, u);
 	//	printf("\n");
-		ft_printf("%-*s, %-*s, %-*s, %-*s, %-*s, %-*s, %-*s, %-*s\n", a, n, a, o, a, p, a, q, a, r, a, s, a, t, a, u);
-		printf("%-*s, %-*s, %-*s, %-*s, %-*s, %-*s, %-*s, %-*s\n", a, n, a, o, a, p, a, q, a, r, a, s, a, t, a, u);
-	//	printf("\n");
+			printf("-----------------------A[%d]-----------------------------------------\n", a);
 		ft_printf("%.*s, %.*s, %.*s, %.*s, %.*s, %.*s, %.*s, %.*s\n", a, n, a, o, a, p, a, q, a, r, a, s, a, t, a, u);
 		printf("%.*s, %.*s, %.*s, %.*s, %.*s, %.*s, %.*s, %.*s\n", a, n, a, o, a, p, a, q, a, r, a, s, a, t, a, u);
 	//	printf("\n");
 		a++;
-	}
+	}/*
 //	printf("----------------------------------------------------------------------------------------------------\n");
 	a = -2;
 	while(a < 5) //T70-177
@@ -206,7 +209,6 @@ int		main(void)
 		b = -2;
 		while (b < 5)
 		{
-	//		printf("-----------------------A[%d]-----B[%d]--------------------------------------%%*.*s\n", a, b);
 			ft_printf("%*.*s, %*.*s, %*.*s, %*.*s, %*.*s, %*.*s, %*.*s, %*.*s\n", a, b, n, a, b, o, a, b, p, a, b, q, a, b, r, a, b, s, a, b, t, a, b, u);
 			printf("%*.*s, %*.*s, %*.*s, %*.*s, %*.*s, %*.*s, %*.*s, %*.*s\n", a, b, n, a, b, o, a, b, p, a, b, q, a, b, r, a, b, s, a, b, t, a, b, u);
 	//		printf("\n");

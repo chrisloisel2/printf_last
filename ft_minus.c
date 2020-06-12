@@ -24,3 +24,29 @@ void	ft_minus(const char *s, va_list *ap, t_pft *one)
 		ft_putchar(' ', one);
 	free(one->result);
 }
+
+void	ft_cast_min(t_pft *one)
+{
+	ft_putchar('-', one);
+	one->decal = 1;
+	one->resultneg = 0;
+}
+
+void	ft_cast(t_pft *one)
+{
+	int i;
+	int y;
+
+	y = one->truepres1;
+	i = 0;
+	if (y < 0)
+		ft_putstr(one->result, one);
+	while (y-- > 0)
+	{
+		if (one->flag == '.')
+			ft_putchar(' ', one);
+		else
+			ft_putchar(one->result[i], one);
+		i++;
+	}
+}

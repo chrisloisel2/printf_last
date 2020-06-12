@@ -20,6 +20,8 @@ void	ft_calculus(t_pft *one)
 
 	p1 = (one->pres1neg) ? -one->pres1 : one->pres1;
 	p2 = (one->pres2neg) ? -one->pres2 : one->pres2;
+	one->truepres1 = p1;
+	one->truepres2 = p2;
 	cp = 0;
 	(one->pres2neg == 1) ? one->pres2 = 0 : 0;
 	cp = ft_strlen(one->result) - one->resultneg;

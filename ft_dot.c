@@ -21,11 +21,16 @@ void	ft_dot(const char *s, va_list *ap, t_pft *one)
 		ft_flag(one);
 	if (one->resultneg == 1)
 	{
-		ft_putchar('-', one);
+		ft_cast_min(one);
 		one->pres1++;
 	}
-	while (one->pres1-- > 0 && one->pres1neg == 0)
-		ft_putchar('0', one);
-	ft_putstr(one->result + one->resultneg, one);
+	if (one->display == 's')
+		ft_cast(one);
+	else 
+	{
+		while (one->pres1-- > 0 && one->pres1neg == 0)
+			ft_putchar('0', one);
+		ft_putstr(one->result + one->decal, one);
+	}
 	free(one->result);
 }
