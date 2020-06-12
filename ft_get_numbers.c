@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 03:04:05 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/11 23:35:03 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/12 04:55:30 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,11 @@ void	ft_get_putnbr(int nb, t_pft *one)
 	char	*base_data;
 
 	base_data = "0123456789";
+	if (nb == -2147483648)
+	{
+		one->resultneg = 1;
+		ft_get_putstr("-2147483648", one);
+	}
 	if (nb < 0)
 	{
 		nb *= -1;
