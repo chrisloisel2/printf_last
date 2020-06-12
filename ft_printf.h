@@ -25,6 +25,7 @@ typedef struct			s_pft
 	int		truepres1;
 	int		truepres2;
 	int		r;
+	int		o;
 	int		decal;
 	int		p1;
 	int		p2;

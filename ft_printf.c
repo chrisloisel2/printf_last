@@ -17,6 +17,7 @@ void		ft_clean(t_pft *one)
 {
 	one->pres1 = 0;
 	one->r = 0;
+	one->o = 0;
 	one->truepres1 = 0;
 	one->truepres2 = 0;
 	one->decal = 0;

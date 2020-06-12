@@ -15,6 +15,7 @@
 void	ft_dot(const char *s, va_list *ap, t_pft *one)
 {
 	one->r = 1;
+	one->o = 1;
 	one->index++;
 	ft_get_all(s, ap, one);
 	if (one->flag != 0)
@@ -24,13 +25,8 @@ void	ft_dot(const char *s, va_list *ap, t_pft *one)
 		ft_cast_min(one);
 		one->pres1++;
 	}
-	if (one->display == 's')
-		ft_cast(one);
-	else 
-	{
-		while (one->pres1-- > 0 && one->pres1neg == 0)
-			ft_putchar('0', one);
-		ft_putstr(one->result + one->decal, one);
-	}
+	while (one->pres1-- > 0 && one->pres1neg == 0)
+		ft_putchar('0', one);
+	ft_putstr(one->result + one->decal, one);
 	free(one->result);
 }

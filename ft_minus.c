@@ -16,8 +16,11 @@ void	ft_minus(const char *s, va_list *ap, t_pft *one)
 {
 	one->index++;
 	ft_get_all(s, ap, one);
-//	if (one->display == 's' && one->flag == '.')
-//		ft_cast(one);
+	if (one->display == 's')
+	{
+		ft_putstr(one->result + one->decal, one);
+		one->resaff = 1;
+	}
 	while (one->pres1-- > 0)
 		ft_putchar(' ', one);
 	if (one->flag != 0)
@@ -34,51 +37,25 @@ void	ft_cast_min(t_pft *one)
 	one->resultneg = 0;
 }
 
-void	ft_cast(t_pft *one)
-{
-	int i;
-	int y;
-
-	i = 0;
-	if (one->pres1 < 0)
-	{
-		ft_putstr(one->result, one);
-		one->resaff = 1;
-	}
-	while (one->pres1-- > 0)
-	{
-		ft_putchar(one->result[i], one);
-		i++;
-	}
-	one->resaff = 1;
-}
-
 void	ft_fixstr(t_pft *one)
 {
 	int i;
 
-	i = one->pres1;
-	if (one->display == 's' && one->flag == '.')
+	i = (one->p2 == 1) ? one->pres2 : one->pres1;
+	if (one->display == 's' && one->display == '.')// || one->o == 1))
 	{
+		while (one->result[i] != '\0' && one->pres2neg == 0)
+		{
+			one->result[i] = '\0';
+			i++;
+		}
 		if (one->p2 == 1)
 		{
-			one->pres2 = 0;
 			one->truepres2 = 0;
+			one->pres2 = 0;
 			one->p2 = 0;
 		}
 		else
-		{
-			while (one->result[i] != '\0')
-			{
-				one->result[i] = '\0';
-				i++;
-			}
-		}
-//		if (one->p2 == 1)
-//		{
-//			y = one->truepres2;
-//			one->pres2 = one->truepres1;
-//			one->pres1 = y;
-//		}
+			one->pres1 = 0;
 	}
 }
