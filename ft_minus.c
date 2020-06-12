@@ -21,12 +21,12 @@ void	ft_minus(const char *s, va_list *ap, t_pft *one)
 		ft_putstr(one->result + one->decal, one);
 		one->resaff = 1;
 	}
-	while (one->pres1-- > 0)
-		ft_putchar(' ', one);
 	if (one->flag != 0)
 		ft_flag(one);
 	if (one->resaff == 0)
 		ft_putstr(one->result + one->decal, one);
+	while (one->pres1-- > 0)
+		ft_putchar(' ', one);
 	free(one->result);
 }
 
@@ -42,7 +42,7 @@ void	ft_fixstr(t_pft *one)
 	int i;
 
 	i = (one->p2 == 1) ? one->pres2 : one->pres1;
-	if (one->display == 's' && one->display == '.')// || one->o == 1))
+	if (one->display == 's' && (one->flag == '.' || one->o == 1))
 	{
 		while (one->result[i] != '\0' && one->pres2neg == 0)
 		{

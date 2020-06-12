@@ -18,7 +18,7 @@ void	ft_flag(t_pft *one)
 	{
 		if (one->pres2neg == 0)
 		{
-			if (one->resultneg == 1)
+			if (one->resultneg == 1 && one->resaff == 0)
 				ft_cast_min(one);
 			while (one->pres2-- > 0 && one->pres2neg == 0)
 				ft_putchar('0', one);
