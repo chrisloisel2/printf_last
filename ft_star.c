@@ -17,8 +17,8 @@ void		ft_star(const char *s, va_list *ap,  t_pft *one)
 	ft_get_all(s, ap, one);
 	if (one->pres1neg == 0)
 	{
-		if (one->display == 's' && one->flag == '.')
-			ft_cast(one);
+//		if (one->display == 's' && one->flag == '.')
+//			ft_cast(one);
 		while (one->pres1-- > 0)
 			ft_putchar(' ', one);
 		if (one->flag != 0)

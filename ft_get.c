@@ -20,6 +20,7 @@ void		ft_get_all(const char *s, va_list *ap, t_pft *one)
 	ft_get_flag(s, one);
 	ft_get_pres2(s, ap, one);
 	ft_get_var(s, ap, one);
+	ft_fixstr(one);
 	ft_calculus(one);
 }
 

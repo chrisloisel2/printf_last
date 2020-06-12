@@ -76,5 +76,6 @@ void			ft_zerosupp(t_pft *one);
 int			ft_zerocal(t_pft *one);
 void			ft_cast_min(t_pft *one);
 void			ft_cast(t_pft *one);
+void			ft_fixstr(t_pft *one);
 
 #endif

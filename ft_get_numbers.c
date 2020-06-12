@@ -73,6 +73,7 @@ void	ft_get_putnbr(int nb, t_pft *one)
 	{
 		one->resultneg = 1;
 		ft_get_putstr("-2147483648", one);
+		one->display = 'd';
 	}
 	else
 	{
