@@ -22,6 +22,10 @@ typedef struct			s_pft
 	int		cpt;
 	int		index;
 	int		pres1;
+	int		p1;
+	int		r;
+	int		decal;
+	int		p2;
 	int		pres1neg;
 	int		pres2;
 	int		pres2neg;
@@ -65,5 +69,6 @@ int				ft_alpha(char c);
 void			ft_minus(const char *s, va_list *ap, t_pft *one);
 void			ft_zero(const char *s, va_list *ap, t_pft *one);
 void			ft_flag(t_pft *one);
+void			ft_zerosupp(t_pft *one);
 
 #endif

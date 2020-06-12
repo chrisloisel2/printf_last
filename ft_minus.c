@@ -19,7 +19,7 @@ void	ft_minus(const char *s, va_list *ap, t_pft *one)
 	if (one->flag != 0)
 		ft_flag(one);
 	if (one->resaff == 0)
-		ft_putstr(one->result, one);
+		ft_putstr(one->result + one->decal, one);
 	while (one->pres1-- > 0)
 		ft_putchar(' ', one);
 	free(one->result);

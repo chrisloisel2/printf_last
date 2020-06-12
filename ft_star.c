@@ -21,13 +21,13 @@ void		ft_star(const char *s, va_list *ap,  t_pft *one)
 			ft_putchar(' ', one);
 		if (one->flag != 0)
 			ft_flag(one);
-		ft_putstr(one->result, one);
+		ft_putstr(one->result + one->decal, one);
 	}
 	else
 	{
 		if (one->flag != 0)
 			ft_flag(one);
-		ft_putstr(one->result, one);
+		ft_putstr(one->result + one->decal, one);
 		while (one->pres1-- > 0)
 			ft_putchar(' ', one);
 	}

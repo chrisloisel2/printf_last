@@ -14,6 +14,7 @@
 
 void	ft_dot(const char *s, va_list *ap, t_pft *one)
 {
+	one->r = 1;
 	one->index++;
 	ft_get_all(s, ap, one);
 	if (one->flag != 0)

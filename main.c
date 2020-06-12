@@ -41,6 +41,8 @@ int		main(void)
 
 
 
+
+/*
 	ft_printf("Simple input test\n\n");
 	ft_printf("%i, %d, %d, %d, %d, %s, %c, %d, %u, %x, %X\n", i, j, k, l, m, n, c, c, j, j, j); //T2
 	printf("%i, %d, %d, %d, %d, %s, %c, %d, %u, %x, %X\n", i, j, k, l, m, n, c, c, j, j, j); //T2
@@ -107,45 +109,48 @@ int		main(void)
 	printf("%-1.1i, %-1.1d, %-1.1d, %-1.1d, %-1.1d, %-1.1d, %-1.1d, %-1.1d\n", i, j, k, l, m, c, e, d); //T32
 	ft_printf("%1.0i, %1.0d, %1.0d, %1.0d, %1.0d, %1.0d, %1.0d, %1.0d\n", i, j, k, l, m, c, e, d); //T33
 	printf("%1.0i, %1.0d, %1.0d, %1.0d, %1.0d, %1.0d, %1.0d, %1.0d\n", i, j, k, l, m, c, e, d); //T33
-/*	while (a < 5) //T34-69
+	while (a < 5) //T34-69
 	{
-	//	printf("/*i, /*d, /*d, /*d, /*d, /*d, /*d, /*d\n");
+		printf("/*i, /*d, /*d, /*d, /*d, /*d, /*d, /*d\n");
 		ft_printf("%*i, %*d, %*d, %*d, %*d, %*d, %*d, %*d\n", a, i, a, j, a, k, a, l, a, m, a, c, a, e, a, d);
 		printf("%*i, %*d, %*d, %*d, %*d, %*d, %*d, %*d\n", a, i, a, j, a, k, a, l, a, m, a, c, a, e, a, d);
-	//	printf("/0*i, /0*d, /0*d, /0*d, /0*d, /0*d, /0*d, /0*d\n");
+		printf("/0*i, /0*d, /0*d, /0*d, /0*d, /0*d, /0*d, /0*d\n");
 		ft_printf("%0*i, %0*d, %0*d, %0*d, %0*d, %0*d, %0*d, %0*d\n", a, i, a, j, a, k, a, l, a, m, a, c, a, e, a, d);
 		printf("%0*i, %0*d, %0*d, %0*d, %0*d, %0*d, %0*d, %0*d\n", a, i, a, j, a, k, a, l, a, m, a, c, a, e, a, d);
-	//	ft_printf("/-*i, /-*d, /-*d, /-*d, /-*d, /-*d, /-*d, /-*d\n");
+		ft_printf("/-*i, /-*d, /-*d, /-*d, /-*d, /-*d, /-*d, /-*d\n");
 		ft_printf("%-*i, %-*d, %-*d, %-*d, %-*d, %-*d, %-*d, %-*d\n", a, i, a, j, a, k, a, l, a, m, a, c, a, e, a, d);
 		printf("%-*i, %-*d, %-*d, %-*d, %-*d, %-*d, %-*d, %-*d\n", a, i, a, j, a, k, a, l, a, m, a, c, a, e, a, d);
-	//	ft_printf("/.*i, /.*d, /.*d, /.*d, /.*d, /.*d, /.*d, /.*d\n");
+		ft_printf("/.*i, /.*d, /.*d, /.*d, /.*d, /.*d, /.*d, /.*d\n");
 		ft_printf("%.*i, %.*d, %.*d, %.*d, %.*d, %.*d, %.*d, %.*d\n", a, i, a, j, a, k, a, l, a, m, a, c, a, e, a, d);
 		printf("%.*i, %.*d, %.*d, %.*d, %.*d, %.*d, %.*d, %.*d\n", a, i, a, j, a, k, a, l, a, m, a, c, a, e, a, d);
 		a++;
 	}
- 	a = -5;
-	while(a < 5) //T70-177
+*/	a = -7;
+	while(a < 7) //T70-177
 	{
-		b = -5;
-		while (b < 5)
+		b = -7;
+		while (b < 7)
 		{	
-//			printf("T[%d]-----A[%d]-----B[%d]                  %%-*.*i\n", iop, a, b);
-//			iop++;
+		//	printf("--------------A[%d]-----B[%d]                  %%-*.*i\n", a, b);
+		//	printf("[%-*.*d]\n", a, b, 45);
+		//	ft_printf("[%-*.*d]\n", a, b, 45);
+			printf("T[%d]-----A[%d]-----B[%d]                  %%-*.*i\n", iop, a, b);
+			iop++;
 			ft_printf("%-*.*i, %-*.*d, %-*.*d, %-*.*d, %-*.*d, %-*.*d, %-*.*d, %-*.*d\n", a, b, i, a, b, j, a, b, k, a, b, l, a, b, m, a, b, c, a, b, e, a, b, d);
 			printf("%-*.*i, %-*.*d, %-*.*d, %-*.*d, %-*.*d, %-*.*d, %-*.*d, %-*.*d\n", a, b, i, a, b, j, a, b, k, a, b, l, a, b, m, a, b, c, a, b, e, a, b, d);	
-//			printf("T[%d]-----A[%d]-----B[%d]                  %%*.*i\n", iop, a, b);
-//			iop++;
+			printf("T[%d]-----A[%d]-----B[%d]                  %%*.*i\n", iop, a, b);
+			iop++;
 			ft_printf("%*.*i, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d\n", a, b, i, a, b, j, a, b, k, a, b, l, a, b, m, a, b, c, a, b, e, a, b, d);
 			printf("%*.*i, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d\n", a, b, i, a, b, j, a, b, k, a, b, l, a, b, m, a, b, c, a, b, e, a, b, d);
-//			printf("T[%d]-----A[%d]-----B[%d]                  %%0*.*i\n", iop, a, b);
-//			iop++;
+			printf("T[%d]-----A[%d]-----B[%d]                  %%0*.*i\n", iop, a, b);
+			iop++;
 			ft_printf("%0*.*i, %0*.*d, %0*.*d, %0*.*d, %0*.*d, %0*.*d, %0*.*d, %0*.*d\n", a, b, i, a, b, j, a, b, k, a, b, l, a, b, m, a, b, c, a, b, e, a, b, d);
 			printf("%0*.*i, %0*.*d, %0*.*d, %0*.*d, %0*.*d, %0*.*d, %0*.*d, %0*.*d\n", a, b, i, a, b, j, a, b, k, a, b, l, a, b, m, a, b, c, a, b, e, a, b, d);
 			b++;
 		}
 		a++;
 	}	
-	a = 19;
+	/*	a = 19;
 	b = 14;
 	ft_printf("%*.*i, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d\n", a, b, -42, a, b, 42, -a, -b, -42, -a, -b, 42, -a, b, -42, -a, b, 42, a, -b, -42, a, -b, 42); //T178
 	printf("%*.*i, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d\n", a, b, -42, a, b, 42, -a, -b, -42, -a, -b, 42, -a, b, -42, -a, b, 42, a, -b, -42, a, -b, 42); //T178

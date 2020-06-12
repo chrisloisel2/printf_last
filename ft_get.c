@@ -36,6 +36,8 @@ void		ft_get_pres1(const char *s, va_list *ap, t_pft *one)
 		one->index = one->index + ft_intlen(one->pres1);
 		one->index += (ft_intlen(one->pres1) == 0) ? 1 : 0;
 	}
+	else
+		one->p1 = 0;
 	if (one->pres1 < 0)
 	{
 		one->pres1neg = 1;
@@ -56,6 +58,8 @@ void		ft_get_pres2(const char *s, va_list *ap, t_pft *one)
 		one->index = one->index + ft_intlen(one->pres2);
 		one->index += (ft_intlen(one->pres2) == 0) ? 1 : 0;
 	}
+	else
+		one->p2 = 0;
 	if (one->pres2 < 0)
 	{
 		one->pres2neg = 1;

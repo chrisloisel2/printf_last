@@ -14,11 +14,16 @@
 
 void	ft_flag(t_pft *one)
 {
-//	printf("pres[%d][%d], flag[%c], presneg[%d][%d]\n", one->pres1, one->pres2, one->flag, one->pres1neg, one->pres2neg);
 	if (one->flag == '.')
 	{
 		if (one->pres2neg == 0)
 		{
+			if (one->resultneg == 1)
+			{
+				ft_putchar('-', one);
+				one->resultneg = 0;
+				one->decal = 1;
+			}
 			while (one->pres2-- > 0 && one->pres2neg == 0)
 				ft_putchar('0', one);
 		}
