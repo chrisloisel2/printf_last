@@ -6,7 +6,7 @@
 /*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/12 01:34:35 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/12 01:57:13 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/12 02:15:36 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_zero(const char *s, va_list *ap, t_pft *one)
 {
 	one->index++;
 	ft_get_all(s, ap, one);
+	if (one->flag != 0)
+		ft_flag(one);
 	if (one->pres1neg)
 	{
 		ft_putstr(one->result, one);

@@ -6,7 +6,7 @@
 /*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 22:57:15 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/12 00:59:32 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/12 03:38:59 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,23 @@ void	ft_calculus(t_pft *one)
 	cp = ft_strlen(one->result) - one->resultneg;
 	if (one->pres1 > 0)
 		one->pres1 -= one->resultneg;
-	one->pres1 -= one->pres2;
-	if (one->pres2 > cp)
+	if (one->pres2neg == 0)
+		one->pres1 -= one->pres2;
+	if (one->pres2 > one->pres1 && one->pres2neg == 0)
+	{
 		one->pres2 -= cp;
+	}
 	else
 	{
-		while (one->pres2 > 0 && cp > 0)
+		while (one->pres2 > 0 && cp > 0 && one->pres2neg == 0)
 		{
 			one->pres2--;
 			cp--;
 		}
-		(one->pres1 > one->pres2) ? one->pres1 -= cp : 0;
+	//	printf("%d, %d", one->pres1, one->pres2);
+//		if (one->pres1 >= one->pres2)
+//			one->pres1 -= cp;
+//		else if (one->pres1neg == 0 && one->pres2neg == 1)
+			one->pres1 -= cp;
 	}
 }

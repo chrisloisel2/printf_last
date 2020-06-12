@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 02:00:33 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/12 01:35:21 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/12 02:49:31 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct			s_pft
 	int		pres2;
 	int		pres2neg;
 	int		resultneg;
+	int		resaff;
 	char	*result;
 	char 	flag;
 
@@ -63,5 +64,6 @@ void			ft_dot(const char *s, va_list *ap, t_pft *one);
 int				ft_alpha(char c);
 void			ft_minus(const char *s, va_list *ap, t_pft *one);
 void			ft_zero(const char *s, va_list *ap, t_pft *one);
+void			ft_flag(t_pft *one);
 
 #endif
