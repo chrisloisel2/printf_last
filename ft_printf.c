@@ -15,14 +15,12 @@
 
 void		ft_clean(t_pft *one)
 {
-	one->result = malloc(sizeof(char)* 1);
 	one->pres1 = 0;
 	one->pres1neg = 0;
 	one->pres2 = 0;
 	one->pres2neg = 0;
 	one->resultneg = 0;
 	one->resaff = 0;
-	one->result[0] = '\0';
 	one->flag = 0;
 }
 

@@ -14,6 +14,8 @@
 
 void		ft_get_all(const char *s, va_list *ap, t_pft *one)
 {
+	one->result = malloc(sizeof(char)* 1);
+	one->result[0] = '\0';
 	ft_get_pres1(s, ap, one);
 	ft_get_flag(s, one);
 	ft_get_pres2(s, ap, one);

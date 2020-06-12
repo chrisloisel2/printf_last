@@ -70,15 +70,18 @@ void	ft_get_putnbr(int nb, t_pft *one)
 		one->resultneg = 1;
 		ft_get_putstr("-2147483648", one);
 	}
-	if (nb < 0)
+	else
 	{
-		nb *= -1;
-		one->resultneg = 1;
-		ft_get_putchar('-', one);
+		if (nb < 0)
+		{
+			nb *= -1;
+			one->resultneg = 1;
+			ft_get_putchar('-', one);
+		}
+		if (nb >= 10)
+		{
+			ft_get_putnbr(nb / 10, one);
+		}
+		ft_get_putchar(base_data[nb % 10], one);
 	}
-	if (nb >= 10)
-	{
-		ft_get_putnbr(nb / 10, one);
-	}
-	ft_get_putchar(base_data[nb % 10], one);
 }
