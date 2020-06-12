@@ -23,7 +23,7 @@ void		ft_star(const char *s, va_list *ap,  t_pft *one)
 			ft_putchar(' ', one);
 		if (one->flag != 0)
 			ft_flag(one);
-		if (!(one->display == 's' && one->flag == '.'))
+		if (one->resaff == 0)
 			ft_putstr(one->result + one->decal, one);
 	}
 	else

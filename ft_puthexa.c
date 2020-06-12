@@ -63,7 +63,7 @@ void	ft_putnbr(int nb, t_pft *one)
 	if (nb == -2147483648)
 	{
 		one->resultneg = 1;
-		ft_get_putstr("-2147483648", one);
+		ft_putstr("-2147483648", one);
 	}
 	if (nb < 0)
 	{

@@ -49,4 +49,5 @@ void	ft_cast(t_pft *one)
 			ft_putchar(one->result[i], one);
 		i++;
 	}
+	one->resaff = 1;
 }
