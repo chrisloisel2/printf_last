@@ -21,6 +21,7 @@ void		ft_get_all(const char *s, va_list *ap, t_pft *one)
 	ft_get_pres2(s, ap, one);
 	ft_get_var(s, ap, one);
 	ft_fixstr(one);
+	ft_zerosuppr(one);
 	ft_calculus(one);
 }
 
@@ -39,6 +40,7 @@ void		ft_get_pres1(const char *s, va_list *ap, t_pft *one)
 	}
 	else
 		one->p1 = 0;
+	one->truepres1 = one->pres1;
 	if (one->pres1 < 0)
 	{
 		one->pres1neg = 1;
@@ -61,6 +63,7 @@ void		ft_get_pres2(const char *s, va_list *ap, t_pft *one)
 	}
 	else
 		one->p2 = 0;
+	one->truepres2 = one->pres2;
 	if (one->pres2 < 0)
 	{
 		one->pres2neg = 1;

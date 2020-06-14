@@ -37,7 +37,6 @@ void	ft_get_putchar(char c, t_pft *one)
 	string[0] = c;
 	string[1] = '\0';
 	ft_free_strjoin(one->result, (char *)string, &one->result);
-	one->cpt++;
 	one->display = 'c';
 }
 

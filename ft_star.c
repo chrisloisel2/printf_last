@@ -14,6 +14,7 @@
 
 void		ft_star(const char *s, va_list *ap,  t_pft *one)
 {
+	one->star = 1;
 	ft_get_all(s, ap, one);
 	if (one->pres1neg == 0)
 	{

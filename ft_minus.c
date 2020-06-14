@@ -14,6 +14,7 @@
 
 void	ft_minus(const char *s, va_list *ap, t_pft *one)
 {
+	one->minus = 1;
 	one->index++;
 	ft_get_all(s, ap, one);
 	if (one->display == 's')
@@ -42,7 +43,7 @@ void	ft_fixstr(t_pft *one)
 	int i;
 
 	i = (one->p2 == 1) ? one->pres2 : one->pres1;
-	if (one->display == 's' && (one->flag == '.' || one->o == 1))
+	if (one->display == 's' && (one->flag == '.' || one->dot == 1))
 	{
 		while (one->result[i] != '\0' && one->pres2neg == 0)
 		{
