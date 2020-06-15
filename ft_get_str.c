@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 03:43:53 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/11 04:54:52 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/15 13:51:55 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_get_putstr(char *s, t_pft *one)
 
 	i = 0;
 	if (s == NULL)
-		printf("ok\n");
+		ft_get_putstr("(null)", one);
 	else
 	{
 		while (s[i] != '\0')

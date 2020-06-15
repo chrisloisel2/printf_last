@@ -6,7 +6,7 @@
 /*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/12 01:34:35 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/15 03:21:58 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/15 13:48:41 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	ft_zero(const char *s, va_list *ap, t_pft *one)
 
 void	ft_zerosuppr(t_pft *one)
 {
-	if (ft_strlen(one->result) == 1 && one->result[0] == '0')
+	if (ft_strlen(one->result) == 1 && one->result[0] == '0' && one->display != 's' && one->display != 'c')
 	{
 //		if ((one->p1 == 0 || one->truepres1 == 0) && one->flag == '.' && (one->p2 == 0 || one->truepres2 == 0))
 //				one->result[0] = '\0';
@@ -51,7 +51,7 @@ void	ft_zerosuppr(t_pft *one)
 //				one->result[0] = '\0';
 //		if (one->truepres1 == 0 && one->flag == 0 && one->dot == 1)
 //				one->result[0] = '\0';
-//		if (one->p2 == 1 && one->truepres2 == 0 && one->flag == '.')
-//				one->result[0] = '\0';
+		if ((one->p2 == 0 || one->truepres2 == 0) && one->flag == '.')
+				one->result[0] = '\0';
 	}
 }
