@@ -6,7 +6,7 @@
 /*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/29 14:43:27 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/15 14:52:58 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/15 15:23:19 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -320,6 +320,8 @@ int		main(void)
 	printf("%-.0i\n", 0); // 1st '*' = -4, 2nd '*' = 0
 	ft_printf("%0.0i\n", 0); // 1st '*' = -4, 2nd '*' = 0
 	printf("%0.0i\n", 0); // 1st '*' = -4, 2nd '*' = 0
-
+	a = 3;
+	ft_printf("%.*i, %.*d, %.*d, %.*d, %.*d, %.*d, %.*d, %.*d\n", a, i, a, j, a, k, a, l, a, m, a, c, a, e, a, d);
+	printf("%.*i, %.*d, %.*d, %.*d, %.*d, %.*d, %.*d, %.*d\n", a, i, a, j, a, k, a, l, a, m, a, c, a, e, a, d);
 	return (0);
 }

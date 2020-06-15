@@ -6,7 +6,7 @@
 /*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 22:57:15 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/12 03:38:59 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/15 15:18:38 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_calculus(t_pft *one)
 	if (cp < one->pres1 || cp < one->pres2)
 	{
 		if (one->pres1 > 0)
-			one->pres1 -= one->resultneg;
+		 one->pres1 -= one->resultneg;
 		if (p2 > 0)
 		{
 			one->pres2 -= cp;

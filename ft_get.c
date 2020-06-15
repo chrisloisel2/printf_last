@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 00:29:23 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/15 14:48:57 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/15 15:16:07 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,23 +73,21 @@ void		ft_get_pres2(const char *s, va_list *ap, t_pft *one)
 
 void		ft_get_flag(const char *s, t_pft *one)
 {
-	printf("\n----->%c     |%c|\n", s[one->index], one->flag); // 1st '*' = -4, 2nd '*' = 0
 	if (s[one->index] == '.')
 	{
 		one->flag = '.';
 		one->index++;
 	}
-	if (s[one->index] == '-')
+	else if (s[one->index] == '-')
 	{
 		one->flag = '-';
 		one->index++;
 	}
-	if (s[one->index] == '0')
+	else if (s[one->index] == '0')
 	{
 		one->flag = '0';
 		one->index++;
 	}
-	printf("\n++++++>%c     |%c|\n", s[one->index], one->flag); // 1st '*' = -4, 2nd '*' = 0
 }
 
 void		ft_get_var(const char *s, va_list *ap, t_pft *one)

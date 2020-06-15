@@ -6,7 +6,7 @@
 /*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 23:59:48 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/15 03:30:25 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/15 15:31:37 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,11 @@ void	ft_dot(const char *s, va_list *ap, t_pft *one)
 	one->index++;
 	ft_get_all(s, ap, one);
 	if (one->resultneg == 1)
+	{
+		if (ft_strlen(one->result) - one->resultneg < one->truepres1)
+			one->pres1++;
 		ft_cast_min(one);
+	}
 	if (one->flag != 0)
 		ft_flag(one);
 	while (one->pres1-- > 0 && one->pres1neg == 0)
