@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 01:38:40 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/16 00:26:11 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/16 00:53:19 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ void		ft_errors(const char *s, t_pft *one)
 		a2 = s[one->index + 2];
 		b2 = s[one->index + 3];
 	}
+	printf("");
 }
 
 void		ft_var(const char *s, va_list *ap, t_pft *one)
