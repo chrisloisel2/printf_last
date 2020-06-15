@@ -6,7 +6,7 @@
 /*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/29 14:43:27 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/15 03:13:51 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/15 14:52:58 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int		main(void)
 	int		w = 0;
 
 	printf("%d\n", ft_printf("Simple input test\n\n"));
-/*	printf("%d\n", printf("Simple input test\n\n"));
+	printf("%d\n", printf("Simple input test\n\n"));
 	printf("%d\n", ft_printf("%i, %d, %d, %d, %d, %s, %c, %d, %u, %x, %X\n", i, j, k, l, m, n, c, c, j, j, j)); //T2
 	printf("%d\n", printf("%i, %d, %d, %d, %d, %s, %c, %d, %u, %x, %X\n", i, j, k, l, m, n, c, c, j, j, j)); //T2
 	printf("%d\n", ft_printf("%0i, %0d, %0d, %0d, %0d, %0d, %0d, %0d\n", i, j, k, l, m, c, e, d)); //T3
@@ -119,7 +119,7 @@ int		main(void)
 		printf("%.*i, %.*d, %.*d, %.*d, %.*d, %.*d, %.*d, %.*d\n", a, i, a, j, a, k, a, l, a, m, a, c, a, e, a, d);
 		a++;
 	}
-*/	a = -5;
+	a = -5;
 	while(a < 5) //T70-177
 	{
 		b = -5;
@@ -145,7 +145,7 @@ int		main(void)
 		a++;
 	}	
 	a = 19;
-/*	b = 14;
+	b = 14;
 	ft_printf("%*.*i, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d\n", a, b, -42, a, b, 42, -a, -b, -42, -a, -b, 42, -a, b, -42, -a, b, 42, a, -b, -42, a, -b, 42); //T178
 	printf("%*.*i, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d\n", a, b, -42, a, b, 42, -a, -b, -42, -a, -b, 42, -a, b, -42, -a, b, 42, a, -b, -42, a, -b, 42); //T178
 //	printf("\n");
@@ -312,8 +312,14 @@ int		main(void)
 	ft_printf(" --- Return : %d\n", ft_printf(""));
 	printf(" --- Return : %d\n", ft_printf(""));
 
-	ft_printf("%-.i, %0.0d, %-d, %-0.0d, %00d, %1.0d, %1.0d, %1.*d\n", 0, 0, 0, 0, 0, 0, 0, 0, 0);
-	printf("%-.i, %0.0d, %-d, %-0.0d, %00d, %.0d, %1.0d, %1.*d\n", 0, 0, 0, 0, 0, 0, 0, 0, 0);
-	printf("%0*.*i, %0*.*d, %0*.*d, %0*.*d, %0*.*d, %0*.*d, %0*.*d, %0*.*d" // 1st '*' = 4, 2nd '*' = 0
-*/	return (0);
+	ft_printf("%1.0i\n", 0); // 1st '*' = -4, 2nd '*' = 0
+	printf("%1.0i\n", 0); // 1st '*' = -4, 2nd '*' = 0
+	ft_printf("%-1.0i\n", 0); // 1st '*' = -4, 2nd '*' = 0
+	printf("%-1.0i\n", 0); // 1st '*' = -4, 2nd '*' = 0
+	ft_printf("%-.0i\n", 0); // 1st '*' = -4, 2nd '*' = 0
+	printf("%-.0i\n", 0); // 1st '*' = -4, 2nd '*' = 0
+	ft_printf("%0.0i\n", 0); // 1st '*' = -4, 2nd '*' = 0
+	printf("%0.0i\n", 0); // 1st '*' = -4, 2nd '*' = 0
+
+	return (0);
 }

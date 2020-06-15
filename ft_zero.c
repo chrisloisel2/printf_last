@@ -6,7 +6,7 @@
 /*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/12 01:34:35 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/15 13:48:41 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/15 14:43:40 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,17 @@ void	ft_zerosuppr(t_pft *one)
 	if (ft_strlen(one->result) == 1 && one->result[0] == '0' && one->display != 's' && one->display != 'c')
 	{
 //		if ((one->p1 == 0 || one->truepres1 == 0) && one->flag == '.' && (one->p2 == 0 || one->truepres2 == 0))
-//				one->result[0] = '\0';
+//			one->result[0] = '\0';
 //		if ((one->truepres2 <= 0) && (one->flag == '.' && one->truepres1 == 0))
-//				one->result[0] = '\0';
+//			one->result[0] = '\0';
 //		if (one->p1 == 0 && one->p2 == 0 && one->flag == '.')
-//				one->result[0] = '\0';
+//			one->result[0] = '\0';
 //		if (one->truepres1 == 0 && one->flag == 0 && one->dot == 1)
-//				one->result[0] = '\0';
+//			one->result[0] = '\0';
+		printf("p[%d][%d] pres[%d][%d] truepres[%d][%d] flag[%c]\n", one->p1, one->p2, one->pres1, one->pres2, one->truepres1, one->truepres2, one->flag);
 		if ((one->p2 == 0 || one->truepres2 == 0) && one->flag == '.')
-				one->result[0] = '\0';
+			one->result[0] = '\0';
+		if ((one->truepres1 == 0 || one->p1 == 0) && one->dot == 1)
+			one->result[0] = '\0';
 	}
 }

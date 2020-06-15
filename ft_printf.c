@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 01:38:40 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/15 01:56:29 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/15 14:14:52 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ void		ft_clean(t_pft *one)
 	one->resultneg = 0;
 	one->resaff = 0;
 	one->flag = 0;
+	one->dot = 0;
+	one->star = 0;
+	one->minus = 0;
 }
 
 void		ft_var(const char *s, va_list *ap, t_pft *one)
