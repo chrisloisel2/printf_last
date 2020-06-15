@@ -6,7 +6,7 @@
 /*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/12 01:20:23 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/12 02:51:02 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/15 03:46:47 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,11 @@ void	ft_fixstr(t_pft *one)
 {
 	int i;
 
-	i = (one->p2 == 1) ? one->pres2 : one->pres1;
-	if (one->display == 's' && (one->flag == '.' || one->dot == 1))
+	i = (one->p2 == 1 || one->flag == '.') ? one->pres2 : one->pres1;
+	if (one->display == 's')// && (one->flag == '.'))// || one->dot == 1))
 	{
+		if (one->p2 == 0 && one->star == 1)
+			return ;
 		while (one->result[i] != '\0' && one->pres2neg == 0)
 		{
 			one->result[i] = '\0';
