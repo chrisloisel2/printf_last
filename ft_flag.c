@@ -6,7 +6,7 @@
 /*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/12 02:08:25 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/15 18:31:53 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/16 00:17:21 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,21 @@ void	ft_flag(t_pft *one)
 				ft_cast_min(one);
 			while (one->pres2-- > 0 && one->pres2neg == 0)
 				ft_putchar('0', one);
+		}
+	}
+	if (one->flag == '-')
+	{
+		if (one->pres2neg == 0)
+		{
+			if (one->resultneg == 1 && one->resaff == 0)
+			{
+				ft_cast_min(one);
+				one->pres2--;
+			}
+			ft_putstr(one->result + one->decal, one);
+			one->resaff = 1;
+			while (one->pres2-- > 0 && one->pres2neg == 0)
+				ft_putchar(' ', one);
 		}
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 01:38:40 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/15 19:26:11 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/16 00:26:11 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,13 @@ void		ft_errors(const char *s, t_pft *one)
 {
 	char a;
 	char b;
-	char c;
-	char d;
+	char a2;
+	char b2;
 
 	a = s[one->index];
 	b = s[one->index + 1];
-	d = s[one->index + 2];
-	c = s[one->index + 4];
+	a2 = s[one->index + 2];
+	b2 = s[one->index + 3];
 	while (a == b && ft_checkflag(a))
 	{
 		if (s[one->index] == '%')
@@ -52,13 +52,13 @@ void		ft_errors(const char *s, t_pft *one)
 		a = s[one->index];
 		b = s[one->index + 1];
 	}
-	while (a == d && b == c && ft_checkflag(a) && ft_checkflag(b))
+	while (a == a2 && b == b2)
 	{
-		one->index += 2;
+		one->index = one->index + 2;
 		a = s[one->index];
 		b = s[one->index + 1];
-		d = s[one->index + 2];
-		c = s[one->index + 4];
+		a2 = s[one->index + 2];
+		b2 = s[one->index + 3];
 	}
 }
 

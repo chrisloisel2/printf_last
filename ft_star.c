@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 00:28:25 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/15 14:44:17 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/16 00:03:59 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ void		ft_star(const char *s, va_list *ap,  t_pft *one)
 	{
 		if (one->flag != 0)
 			ft_flag(one);
-		ft_putstr(one->result + one->decal, one);
+		if (one->resaff == 0)
+			ft_putstr(one->result + one->decal, one);
 		while (one->pres1-- > 0)
 			ft_putchar(' ', one);
 	}
