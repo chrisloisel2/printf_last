@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 01:38:40 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/15 14:14:52 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/15 18:32:45 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,20 +33,21 @@ void		ft_clean(t_pft *one)
 	one->minus = 0;
 }
 
+void		ft_errors(const char *s, t_pft *one)
+{
+	while (s[one->index] == s[one->index + 1] && ft_checkflag(s[one->index]))
+	{
+		if (s[one->index] == '%')
+			break ;
+		one->index++;
+	}
+}
+
 void		ft_var(const char *s, va_list *ap, t_pft *one)
 {
-	unsigned int x;
-
-	if (s[one->index] == 'x')
-	{
-		x = va_arg(*ap, unsigned int);
-		ft_puthexa(x, one);
-	}
-	if (s[one->index] == 'X')
-	{
-		x = va_arg(*ap, unsigned int);
-		ft_puthexa_maj(x, one);
-	}
+	ft_errors(s, one);
+	(s[one->index] == 'x') ? ft_puthexa(va_arg(*ap, unsigned int), one) : 0;
+	(s[one->index] == 'X') ? ft_puthexa_maj(va_arg(*ap, unsigned int), one) : 0;
 	(s[one->index] == 'u') ? ft_putu(va_arg(*ap, unsigned long), one) : 0;
 	(s[one->index] == 'p') ? ft_point(va_arg(*ap, unsigned long), one) : 0;
 	(s[one->index] == 'd') ? ft_putnbr(va_arg(*ap, int), one) : 0;

@@ -6,7 +6,7 @@
 /*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/12 02:08:25 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/12 03:03:44 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/15 18:31:53 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,15 @@ void	ft_flag(t_pft *one)
 				ft_putchar('0', one);
 		}
 	}
+}
+
+int		ft_checkflag(char c)
+{
+	if (c == '.')
+		return (1);
+	if (c == '0')
+		return (1);
+	if (c == '-')
+		return (1);
+	return (0);
 }

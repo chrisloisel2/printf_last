@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 00:29:23 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/15 15:16:07 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/15 18:32:28 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void		ft_get_all(const char *s, va_list *ap, t_pft *one)
 	ft_fixstr(one);
 	ft_zerosuppr(one);
 	ft_calculus(one);
+	ft_errors(s, one);
 }
 
 void		ft_get_pres1(const char *s, va_list *ap, t_pft *one)

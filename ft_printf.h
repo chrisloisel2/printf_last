@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 02:00:33 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/15 14:15:03 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/15 18:32:56 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,7 @@ int			ft_zerocal(t_pft *one);
 void			ft_cast_min(t_pft *one);
 void			ft_cast(t_pft *one);
 void			ft_fixstr(t_pft *one);
+int				ft_checkflag(char c);
+void			ft_errors(const char *s, t_pft *one);
 
 #endif
