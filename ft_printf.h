@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 02:00:33 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/12 02:49:31 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/15 02:08:08 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,9 @@ void			ft_get_flag(const char *s, t_pft *one);
 void			ft_get_var(const char *s, va_list *ap, t_pft *one);
 void			ft_star(const char *s, va_list *ap,  t_pft *one);
 void			ft_get_putnbr(int nb, t_pft *one);
-void			ft_get_puthexa(long nb, t_pft *one);
+void			ft_get_puthexa(unsigned int nb, t_pft *one);
 void			ft_get_putu(unsigned int nb, t_pft *one);
-void			ft_get_puthexa_maj(long nb, t_pft *one);
+void			ft_get_puthexa_maj(unsigned int nb, t_pft *one);
 void			ft_get_putstr(char *s, t_pft *one);
 void			ft_get_putchar(char c, t_pft *one);
 void			ft_get_point(unsigned long p, t_pft *one);

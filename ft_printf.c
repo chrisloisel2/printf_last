@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 01:38:40 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/12 05:05:33 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/15 01:56:29 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,18 @@ void		ft_clean(t_pft *one)
 
 void		ft_var(const char *s, va_list *ap, t_pft *one)
 {
-	(s[one->index] == 'x') ? ft_puthexa(va_arg(*ap, long), one) : 0;
-	(s[one->index] == 'X') ? ft_puthexa_maj(va_arg(*ap, long), one) : 0;
+	unsigned int x;
+
+	if (s[one->index] == 'x')
+	{
+		x = va_arg(*ap, unsigned int);
+		ft_puthexa(x, one);
+	}
+	if (s[one->index] == 'X')
+	{
+		x = va_arg(*ap, unsigned int);
+		ft_puthexa_maj(x, one);
+	}
 	(s[one->index] == 'u') ? ft_putu(va_arg(*ap, unsigned long), one) : 0;
 	(s[one->index] == 'p') ? ft_point(va_arg(*ap, unsigned long), one) : 0;
 	(s[one->index] == 'd') ? ft_putnbr(va_arg(*ap, int), one) : 0;

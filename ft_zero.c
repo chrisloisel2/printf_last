@@ -6,7 +6,7 @@
 /*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/12 01:34:35 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/12 02:15:36 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/15 02:33:56 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_zero(const char *s, va_list *ap, t_pft *one)
 		if (one->resultneg == 1 && one->truepres2 < 0)
 			ft_cast_min(one);
 		while (one->pres1-- > 0)
-			ft_putchar( (one->truepres2 < 0) ? '0' : ' ', one);
+			ft_putchar((one->truepres2 <= 0) ? '0' : ' ', one);
 		if (one->flag != 0)
 			ft_flag(one);
 		ft_putstr(one->result + one->decal, one);
@@ -43,11 +43,11 @@ void	ft_zerosuppr(t_pft *one)
 	{
 //		if ((one->truepres1 <= 0 || one->p1) && (one->r || one->flag == '.') && one->p2)
 //				one->result[0] = '\0';
-		if (one->p1 == 0 && one->p2 == 0 && one->flag == '.')
-				one->result[0] = '\0';
-//		if (one->truepres1 == 0 && one->truepres2 == 0 && one->flag == '.')
+//		if (one->p1 == 0 && one->p2 == 0 && one->flag == '.')
 //				one->result[0] = '\0';
-		if (one->p2 == 1 && one->truepres2 == 0 && one->flag == '.')
-				one->result[0] = '\0';
+//		if (one->truepres1 == 0 && one->flag == 0 && one->dot == 1)
+//				one->result[0] = '\0';
+//		if (one->p2 == 1 && one->truepres2 == 0 && one->flag == '.')
+//				one->result[0] = '\0';
 	}
 }

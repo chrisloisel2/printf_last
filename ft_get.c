@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 00:29:23 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/12 05:04:57 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/15 02:23:46 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,10 +92,19 @@ void		ft_get_flag(const char *s, t_pft *one)
 
 void		ft_get_var(const char *s, va_list *ap, t_pft *one)
 {
+	int x;
+
+	x = 0;
 	if (s[one->index] == 'x')
-		ft_get_puthexa(va_arg(*ap, long), one);
+	{
+		x = va_arg(*ap, unsigned int);
+		ft_get_puthexa(x, one);
+	}
 	if (s[one->index] == 'X')
-		ft_get_puthexa_maj(va_arg(*ap, long), one);
+	{
+		x = va_arg(*ap, unsigned int);
+		ft_get_puthexa_maj(x, one);
+	}
 	if (s[one->index] == 'u')
 		ft_get_putu(va_arg(*ap, unsigned long), one);
 	if (s[one->index] == 'p')

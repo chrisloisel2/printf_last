@@ -6,7 +6,7 @@
 /*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/29 14:43:27 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/12 03:57:47 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/15 02:33:08 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,7 @@ int		main(void)
 	char	*u = "-0";
 	int		z = 1;
 	int		iop = 1;
-
-
+	int		w = 0;
 
 	printf("%d\n", ft_printf("Simple input test\n\n"));
 	printf("%d\n", printf("Simple input test\n\n"));
@@ -312,5 +311,8 @@ int		main(void)
     	printf("(null)\n");
 	ft_printf(" --- Return : %d\n", ft_printf(""));
 	printf(" --- Return : %d\n", ft_printf(""));
+
+	ft_printf("%-.i, %0.0d, %-d, %-0.0d, %00d, %1.0d, %1.0d, %1.*d\n", 0, 0, 0, 0, 0, 0, 0, 0, 0);
+	printf("%-.i, %0.0d, %-d, %-0.0d, %00d, %.0d, %1.0d, %1.*d\n", 0, 0, 0, 0, 0, 0, 0, 0, 0);
 	return (0);
 }
