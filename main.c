@@ -6,7 +6,7 @@
 /*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/29 14:43:27 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/16 17:02:18 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/17 01:10:54 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,50 @@
 
 int		main(void)
 {
+	printf("%%p\n", NULL);
 	ft_printf("%p\n", NULL);
 	printf("%p\n", NULL);
+	printf("\n");
+	printf("%%5p\n", NULL);
 	ft_printf("%5p\n", NULL);
 	printf("%5p\n", NULL);
+	printf("\n");
+	printf("%%2p\n", NULL);
 	ft_printf("%2p\n", NULL);
 	printf("%2p\n", NULL);
+	printf("\n");
+	printf("%%.p\n", NULL);
 	ft_printf("%.p\n", NULL);
 	printf("%.p\n", NULL);
+	printf("\n");
+	printf("%%5.p\n", NULL);
 	ft_printf("%5.p\n", NULL);
 	printf("%5.p\n", NULL);
+	printf("\n");
+	printf("%%2.p\n", NULL);
 	ft_printf("%2.p\n", NULL);
 	printf("%2.p\n", NULL);
+	printf("\n");
+	printf("%%9.2p\n", 1234);
 	ft_printf("%9.2p\n", 1234);
 	printf("%9.2p\n", 1234);
+	printf("\n");
+	printf("%%2.9p\n", 1234);
 	ft_printf("%2.9p\n", 1234);
 	printf("%2.9p\n", 1234);
+	printf("\n");
+	printf("%%.5p\n", 0);
 	ft_printf("%.5p\n", 0);
 	printf("%.5p\n", 0);
+	printf("\n");
+	printf("%%.0p\n", 0);
 	ft_printf("%.0p\n", 0);
 	printf("%.0p\n", 0);
+	printf("\n");
+	printf("%%5p\n", 0);
 	ft_printf("%5p\n", 0);
 	printf("%5p\n", 0);
+	printf("\n");
 
 
 
