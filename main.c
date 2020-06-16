@@ -6,7 +6,7 @@
 /*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/29 14:43:27 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/16 00:22:56 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/16 15:47:54 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -313,6 +313,7 @@ int		main(void)
 	printf(" --- Return : %d\n", ft_printf(""));
 	ft_printf("%1.s, %1.s, %1.s, %1.s, %1.s\n", n, o, p, q, r); //T186
 	printf("%1.s, %1.s, %1.s, %1.s, %1.s\n", n, o, p, q, r);//T186
-	
+	ft_printf("%5.s, %5.s, %5.s, %5.s, %5.s\n", n, o, p, q, r); //T186
+	printf("%5.s, %5.s, %5.s, %5.s, %5.s\n", n, o, p, q, r);//T186
 	return (0);
 }

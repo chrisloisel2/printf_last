@@ -6,7 +6,7 @@
 /*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/12 01:20:23 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/16 03:44:28 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/16 15:43:14 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	ft_fixstr(t_pft *one)
 			return ;
 		while (one->result[i] != '\0')
 			one->result[i++] = '\0';
-		if (one->p2 == 1)
+		if (one->flag != 0)
 		{
 			one->truepres2 = 0;
 			one->pres2 = 0;
