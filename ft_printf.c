@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 01:38:40 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/16 00:53:19 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/16 03:37:07 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,32 +35,21 @@ void		ft_clean(t_pft *one)
 
 void		ft_errors(const char *s, t_pft *one)
 {
-	char a;
-	char b;
-	char a2;
-	char b2;
-
-	a = s[one->index];
-	b = s[one->index + 1];
-	a2 = s[one->index + 2];
-	b2 = s[one->index + 3];
-	while (a == b && ft_checkflag(a))
+	while (s[one->index] == s[one->index + 1])
 	{
-		if (s[one->index] == '%')
+		if (s[one->index] == '%' || !ft_checkflag(s[one->index]))
 			break ;
 		one->index++;
-		a = s[one->index];
-		b = s[one->index + 1];
 	}
-	while (a == a2 && b == b2)
+	while (s[one->index] == s[one->index + 2] && s[one->index + 1] == s[one->index + 3])
 	{
-		one->index = one->index + 2;
-		a = s[one->index];
-		b = s[one->index + 1];
-		a2 = s[one->index + 2];
-		b2 = s[one->index + 3];
+		one->index = one->index + 4;
+//		if (b != b2)
+//			one->index += 3;
+//		if (a != a2)
+//			one->index += 2;
+//		printf("\n%s\n", s + one->index);
 	}
-	printf("");
 }
 
 void		ft_var(const char *s, va_list *ap, t_pft *one)
