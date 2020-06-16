@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 03:43:53 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/15 13:51:55 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/16 16:12:14 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ft_get_putchar(char c, t_pft *one)
 	one->display = 'c';
 }
 
-void		ft_get_point(unsigned long p, t_pft *one)
+void	ft_get_point(unsigned long p, t_pft *one)
 {
 	ft_get_putstr("0x", one);
 	ft_get_puthexa(p, one);

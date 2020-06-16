@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calculus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
+/*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 22:57:15 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/15 15:18:38 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/16 16:29:41 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,14 @@ void	ft_calculus(t_pft *one)
 	int p1;
 	int p2;
 
+	cp = ft_strlen(one->result) - one->resultneg;
 	p1 = (one->pres1neg) ? -one->pres1 : one->pres1;
 	p2 = (one->pres2neg) ? -one->pres2 : one->pres2;
-	one->truepres1 = p1;
-	one->truepres2 = p2;
-	cp = 0;
 	(one->pres2neg == 1) ? one->pres2 = 0 : 0;
-	cp = ft_strlen(one->result) - one->resultneg;
 	if (cp < one->pres1 || cp < one->pres2)
 	{
 		if (one->pres1 > 0)
-		 one->pres1 -= one->resultneg;
+			one->pres1 -= one->resultneg;
 		if (p2 > 0)
 		{
 			one->pres2 -= cp;

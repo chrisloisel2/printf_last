@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 14:15:37 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/15 01:52:38 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/16 15:56:16 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,4 +76,3 @@ void	ft_putnbr(int nb, t_pft *one)
 	}
 	ft_putchar(base_data[(nb % 10)], one);
 }
-

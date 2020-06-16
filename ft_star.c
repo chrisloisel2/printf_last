@@ -6,20 +6,18 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 00:28:25 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/16 00:03:59 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/16 15:59:26 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void		ft_star(const char *s, va_list *ap,  t_pft *one)
+void		ft_star(const char *s, va_list *ap, t_pft *one)
 {
 	one->star = 1;
 	ft_get_all(s, ap, one);
 	if (one->pres1neg == 0)
 	{
-//		if (one->display == 's' && one->flag == '.')
-//			ft_cast(one);
 		while (one->pres1-- > 0)
 			ft_putchar(' ', one);
 		if (one->flag != 0)

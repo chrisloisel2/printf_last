@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_zero.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
+/*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/12 01:34:35 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/16 00:16:19 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/16 16:11:49 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_zero(const char *s, va_list *ap, t_pft *one)
 	}
 	else
 	{
-		if (one->resultneg == 1 && ( one->truepres2 < 0 || one->p2 == 0))
+		if (one->resultneg == 1 && (one->truepres2 < 0 || one->p2 == 0))
 			ft_cast_min(one);
 		while (one->pres1-- > 0)
 			ft_putchar((one->truepres2 < 0 || one->p2 == 0) ? '0' : ' ', one);
@@ -43,12 +43,14 @@ void	ft_zero(const char *s, va_list *ap, t_pft *one)
 
 void	ft_zerosuppr(t_pft *one)
 {
-	if (ft_strlen(one->result) == 1 && one->result[0] == '0' && one->display != 's' && one->display != 'c')
+	if (ft_strlen(one->result) == 1 && one->result[0] == '0')
 	{
-//		printf("p[%d][%d] pres[%d][%d] truepres[%d][%d] flag[%c]\n", one->p1, one->p2, one->pres1, one->pres2, one->truepres1, one->truepres2, one->flag);
-		if ((one->p2 == 0 || one->truepres2 == 0) && one->flag == '.')
-			one->result[0] = '\0';
-		if ((one->truepres1 == 0 || one->p1 == 0) && one->dot == 1)
-			one->result[0] = '\0';
+		if (one->display != 's' && one->display != 'c')
+		{
+			if ((one->p2 == 0 || one->truepres2 == 0) && one->flag == '.')
+				one->result[0] = '\0';
+			if ((one->truepres1 == 0 || one->p1 == 0) && one->dot == 1)
+				one->result[0] = '\0';
+		}
 	}
 }

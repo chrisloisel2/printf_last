@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 03:04:05 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/15 02:09:39 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/16 16:07:41 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,6 @@ void	ft_get_puthexa(unsigned int nb, t_pft *one)
 	char	*base_data;
 
 	base_data = "0123456789abcdef";
-//	if (nb < 0)
-//	{
-//		nb *= -1;
-//		one->resultneg = 1;
-//		ft_get_putchar('-', one);
-//	}
 	if (nb >= 16)
 	{
 		ft_get_puthexa(nb / 16, one);
@@ -35,13 +29,7 @@ void	ft_get_puthexa_maj(unsigned int nb, t_pft *one)
 {
 	char	*base_data;
 
-	base_data = "0123456789ABCDEF";	
-//	if (nb < 0)
-//	{
-//		nb *= -1;
-//		one->resultneg = 1;
-//		ft_get_putchar('-', one);
-//	}
+	base_data = "0123456789ABCDEF";
 	if (nb >= 16)
 	{
 		ft_get_puthexa_maj(nb / 16, one);

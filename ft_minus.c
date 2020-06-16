@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_minus.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
+/*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/12 01:20:23 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/16 15:43:14 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/16 16:11:10 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,11 @@ void	ft_fixstr(t_pft *one)
 
 	i = (one->flag != 0) ? one->pres2 : one->pres1;
 	if (one->flag != 0 && one->pres2neg == 1)
-		return;
+		return ;
 	if (one->flag == 0 && one->pres1neg == 1)
-		return;
+		return ;
 	if (one->minus == 1 && one->flag == 0)
-		return;
+		return ;
 	if (one->display == 's')
 	{
 		if (one->flag == 0 && one->star == 1)

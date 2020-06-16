@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 00:29:23 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/16 03:42:56 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/16 16:16:44 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void		ft_get_all(const char *s, va_list *ap, t_pft *one)
 {
-	one->result = malloc(sizeof(char)* 1);
+	one->result = malloc(sizeof(char) * 1);
 	one->result[0] = '\0';
 	ft_errors(s, one);
 	ft_get_pres1(s, ap, one);
@@ -120,6 +120,4 @@ void		ft_get_var(const char *s, va_list *ap, t_pft *one)
 		ft_get_putstr(va_arg(*ap, char *), one);
 	if (s[one->index] == 'c')
 		ft_get_putchar(va_arg(*ap, int), one);
-	if (s[one->index] == '%')
-		ft_get_putchar('%', one);
 }
