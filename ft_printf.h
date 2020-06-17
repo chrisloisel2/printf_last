@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 02:00:33 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/17 03:39:27 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/18 00:41:10 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef struct			s_pft
 	int		decal;
 	int		p1;
 	int		p2;
+	int		zero;
 	int		point;
 	int		pres1neg;
 	int		pres2;

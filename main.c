@@ -6,7 +6,7 @@
 /*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/29 14:43:27 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/18 00:00:00 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/18 00:45:48 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,10 +149,22 @@ int		main(void)
 	ft_printf("%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p\n",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10,&a11,&a12);
 	printf("%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p\n",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10,&a11,&a12);
 	printf("\n");
-	*/
-	
-		
 
+int moul_i_7(void){return test("%i", INT_MIN);}
+int moul_i_8(void){return test("%i", INT_MIN - 1);}
+int moul_i_9(void){return test("%i", INT_MAX + 1);}
+
+	*/
+
+	long INT_MAX = 2147483647;
+	long INT_MIN = -2147483648;
+
+	ft_printf("%i\n", INT_MIN);	
+	printf("%i\n", INT_MIN);	
+	printf("\n");
+	ft_printf("%i\n", INT_MAX + 1);	
+	printf("%i\n", INT_MAX + 1);	
+	printf("\n");
 	ft_printf("(%-.00s)\n", s_hidden);
 	printf("(%-.00s)\n", s_hidden);
 	printf("\n");

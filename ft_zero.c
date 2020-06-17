@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/12 01:34:35 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/17 01:43:21 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/18 00:19:40 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	ft_zero(const char *s, va_list *ap, t_pft *one)
 {
 	one->index++;
+	one->zero++;
 	ft_get_all(s, ap, one);
 	if (one->pres1neg)
 	{

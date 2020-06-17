@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 14:15:37 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/16 15:56:16 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/18 00:46:31 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,14 +65,17 @@ void	ft_putnbr(int nb, t_pft *one)
 		one->resultneg = 1;
 		ft_putstr("-2147483648", one);
 	}
-	if (nb < 0)
+	else
 	{
-		nb *= -1;
-		ft_putchar('-', one);
+		if (nb < 0)
+		{
+			nb *= -1;
+			ft_putchar('-', one);
+		}
+		if (nb >= 10)
+		{
+			ft_putnbr(nb / 10, one);
+		}
+		ft_putchar(base_data[(nb % 10)], one);
 	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10, one);
-	}
-	ft_putchar(base_data[(nb % 10)], one);
 }

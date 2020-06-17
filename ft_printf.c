@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 01:38:40 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/17 03:39:17 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/18 00:43:08 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void		ft_clean(t_pft *one)
 	one->p1 = 1;
 	one->p2 = 1;
 	one->point = 0;
+	one->zero = 0;
 	one->pres1neg = 0;
 	one->pres2 = 0;
 	one->pres2neg = 0;
@@ -39,6 +40,8 @@ void		ft_errors(const char *s, t_pft *one)
 	char b;
 
 	if (s[one->index] == '0' && s[one->index + 1] == '-')
+		one->index += 1;
+	if (s[one->index] == '-' && s[one->index + 1] == '.')
 		one->index += 1;
 	a = s[one->index];
 	b = s[one->index + 2];
@@ -67,7 +70,7 @@ void		ft_var(const char *s, va_list *ap, t_pft *one)
 	(s[one->index] == 'u') ? ft_putu(va_arg(*ap, unsigned long), one) : 0;
 	(s[one->index] == 'p') ? ft_point(va_arg(*ap, unsigned long), one) : 0;
 	(s[one->index] == 'd') ? ft_putnbr(va_arg(*ap, int), one) : 0;
-	(s[one->index] == 'i') ? ft_putnbr(va_arg(*ap, int), one) : 0;
+	(s[one->index] == 'i') ? ft_putnbr(va_arg(*ap, unsigned int), one) : 0;
 	(s[one->index] == 's') ? ft_putstr(va_arg(*ap, char *), one) : 0;
 	(s[one->index] == 'c') ? ft_putchar(va_arg(*ap, int), one) : 0;
 	(s[one->index] == '%') ? ft_putchar('%', one) : 0;
