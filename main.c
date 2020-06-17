@@ -6,7 +6,7 @@
 /*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/29 14:43:27 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/18 00:45:48 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/18 01:40:04 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,11 +154,47 @@ int moul_i_7(void){return test("%i", INT_MIN);}
 int moul_i_8(void){return test("%i", INT_MIN - 1);}
 int moul_i_9(void){return test("%i", INT_MAX + 1);}
 
+int		moul_s_4(void){char *str = NULL; return test("%s!", str);}
+int c_nullterm_5w(void){return test("%5c", '\0');}
+int c_nullterm_5wlj(void){return test("%-5c", '\0');}
+
+int		pct_5w(void){return test("%5%");}
+int		pct_5wlj(void){return test("%-5%");}
+int		pct_5wzp(void){return test("%05%");}
+int		pct_5wljzp(void){return test("%-05%");}
+
 	*/
 
 	long INT_MAX = 2147483647;
 	long INT_MIN = -2147483648;
+	char *str = NULL;
+	char c = NULL;
 
+
+	ft_printf("(%-5%)\n", str);	
+	printf("(%-5%)\n", str);	
+	printf("\n");
+	ft_printf("-0(%-05%)\n", str);	
+	printf("-0(%-05%)\n", str);	
+	printf("\n");
+	ft_printf("(%05%)\n", str);	
+	printf("(%05%)\n", str);	
+	printf("\n");
+	ft_printf("(%-5%)\n", str);	
+	printf("(%-5%)\n", str);	
+	printf("\n");
+	ft_printf("(%5%)\n", str);	
+	printf("(%5%)\n", str);	
+	printf("\n");
+	ft_printf("(%-5c)\n", str);	
+	printf("(%-5c)\n", str);	
+	printf("\n");
+	ft_printf("(%5c)\n", str);	
+	printf("(%5c)\n", str);	
+	printf("\n");
+/*	ft_printf("%s\n", str);	
+	printf("%s\n", str);	
+	printf("\n");
 	ft_printf("%i\n", INT_MIN);	
 	printf("%i\n", INT_MIN);	
 	printf("\n");
@@ -195,6 +231,6 @@ int moul_i_9(void){return test("%i", INT_MAX + 1);}
 	ft_printf("(%09s)\n", s_hidden);
 	printf("(%09s)\n", s_hidden);
 	printf("\n");
-
+*/
 	return (0);
 }

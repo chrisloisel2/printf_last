@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 00:29:23 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/17 03:21:14 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/18 01:28:26 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,8 @@ void		ft_get_var(const char *s, va_list *ap, t_pft *one)
 		x = va_arg(*ap, unsigned int);
 		ft_get_puthexa_maj(x, one);
 	}
+	if (s[one->index] == '%')
+		ft_get_putstr("%", one);
 	if (s[one->index] == 'p')
 		ft_get_point(va_arg(*ap, unsigned long), one);
 	if (s[one->index] == 'u')

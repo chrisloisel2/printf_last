@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 01:38:40 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/18 00:43:08 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/18 01:34:58 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void		ft_clean(t_pft *one)
 	one->p2 = 1;
 	one->point = 0;
 	one->zero = 0;
+	one->null = 0;
 	one->pres1neg = 0;
 	one->pres2 = 0;
 	one->pres2neg = 0;

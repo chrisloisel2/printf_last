@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 02:06:43 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/16 15:58:42 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/18 01:18:20 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_putstr(char *s, t_pft *one)
 
 	i = 0;
 	if (s == NULL)
-		printf("ok\n");
+		ft_putstr("(null)", one);
 	else
 	{
 		while (s[i] != '\0')
@@ -31,6 +31,8 @@ void	ft_putstr(char *s, t_pft *one)
 
 void	ft_putchar(char c, t_pft *one)
 {
+	if (c == 0)
+		one->null = 1;
 	write(1, &c, 1);
 	one->cpt++;
 }

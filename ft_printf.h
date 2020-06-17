@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 02:00:33 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/18 00:41:10 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/18 01:03:41 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ typedef struct			s_pft
 	int		pres2neg;
 	int		resultneg;
 	int		resaff;
+	int		null;
 	char	*result;
 	char	flag;
 	char	display;

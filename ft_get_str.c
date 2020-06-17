@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 03:43:53 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/17 03:49:53 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/18 01:17:46 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,9 @@ void	ft_get_putstr(char *s, t_pft *one)
 void	ft_get_putchar(char c, t_pft *one)
 {
 	char	string[2];
-
+	
+	if (c == 0)
+		one->null = 1;
 	string[0] = c;
 	string[1] = '\0';
 	ft_free_strjoin(one->result, (char *)string, &one->result);
