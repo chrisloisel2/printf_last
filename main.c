@@ -6,7 +6,7 @@
 /*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/29 14:43:27 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/17 04:04:48 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/18 00:00:00 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int		main(void)
 	static char *a11;
 	static void *a12;
 
-
+/*
 	printf("%%p\n", NULL);
 	ft_printf("|%p|\n", NULL);
 	printf("|%p|\n", NULL);
@@ -113,7 +113,6 @@ int		main(void)
 	printf("\n");
 	printf("%70p%70p%70p%70p%70p%70p%70p%70p%70p%70p%70p%70p\n",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10,&a11,&a12);
 	printf("\n");
-	/*
 
 	ft_printf("%5p%5p%5p%5p%5p%5p%5p%5p%5p%5p%5p%5p\n",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10,&a11,&a12);
 	printf("%5p%5p%5p%5p%5p%5p%5p%5p%5p%5p%5p%5p\n",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10,&a11,&a12);
@@ -151,6 +150,8 @@ int		main(void)
 	printf("%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p%-32p\n",&a01,&a02,&a03,&a04,&a05,&a06,&a07,&a08,&a09,&a10,&a11,&a12);
 	printf("\n");
 	*/
+	
+		
 
 	ft_printf("(%-.00s)\n", s_hidden);
 	printf("(%-.00s)\n", s_hidden);
@@ -167,12 +168,12 @@ int		main(void)
 	ft_printf("(%0000s)\n", s_hidden);
 	printf("(%0000s)\n", s_hidden);
 	printf("\n");
-	ft_printf("(%-00s)\n", s_hidden);
-	printf("(%-00s)\n", s_hidden);
-	printf("\n");
-	ft_printf("(%0-0s)\n", s_hidden);
-	printf("(%0-0s)\n", s_hidden);
-	printf("\n");
+//	ft_printf("-(%-00s)\n", s_hidden);
+//	printf("-(%-00s)\n", s_hidden);
+//	printf("\n");
+//	ft_printf("-(%0-0s)\n", s_hidden);
+//	printf("-(%0-0s)\n", s_hidden);
+//	printf("\n");
 	ft_printf("(%00-s)\n", s_hidden);
 	printf("(%00-s)\n", s_hidden);
 	printf("\n");
