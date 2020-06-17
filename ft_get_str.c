@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 03:43:53 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/16 16:12:14 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/17 03:49:53 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,22 @@ void	ft_get_putchar(char c, t_pft *one)
 
 void	ft_get_point(unsigned long p, t_pft *one)
 {
-	ft_get_putstr("0x", one);
-	ft_get_puthexa(p, one);
+	if (one->truepres2 < one->truepres1 && one->dot == 0)
+		ft_get_putstr("0x", one);
+	else
+		one->point = 1;
+	ft_point_long(p, one);
 	one->display = 'p';
+}
+
+void	ft_point_long(unsigned long nb, t_pft *one)
+{
+	char	*base_data;
+
+	base_data = "0123456789abcdef";
+	if (nb >= 16)
+	{
+		ft_point_long(nb / 16, one);
+	}
+	ft_get_putchar(base_data[nb % 16], one);
 }

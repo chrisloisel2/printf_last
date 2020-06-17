@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 23:59:48 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/16 16:18:48 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/17 03:49:36 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ void	ft_dot(const char *s, va_list *ap, t_pft *one)
 	}
 	if (one->flag != 0)
 		ft_flag(one);
+	if (one->point == 1)
+		ft_putstr("0x", one);
 	while (one->pres1-- > 0 && one->pres1neg == 0)
 		ft_putchar('0', one);
 	if (one->resaff == 0)

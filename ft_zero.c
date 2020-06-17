@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/12 01:34:35 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/16 16:11:49 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/17 01:43:21 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,16 @@ void	ft_zerosuppr(t_pft *one)
 				one->result[0] = '\0';
 			if ((one->truepres1 == 0 || one->p1 == 0) && one->dot == 1)
 				one->result[0] = '\0';
+		}
+	}
+	if (ft_strlen(one->result) == 3 && one->result[2] == '0')
+	{
+		if (one->display == 'p')
+		{
+			if ((one->p2 == 0 || one->truepres2 == 0) && one->flag == '.')
+				one->result[2] = '\0';
+			if ((one->truepres1 == 0 || one->p1 == 0) && one->dot == 1)
+				one->result[2] = '\0';
 		}
 	}
 }

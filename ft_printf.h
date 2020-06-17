@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 02:00:33 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/16 16:31:48 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/17 03:39:27 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef struct			s_pft
 	int		decal;
 	int		p1;
 	int		p2;
+	int		point;
 	int		pres1neg;
 	int		pres2;
 	int		pres2neg;
@@ -81,5 +82,7 @@ void					ft_cast(t_pft *one);
 void					ft_fixstr(t_pft *one);
 int						ft_checkflag(char c);
 void					ft_errors(const char *s, t_pft *one);
+int						ft_checkdisplay(char c);
+void					ft_point_long(unsigned long, t_pft *one);
 
 #endif

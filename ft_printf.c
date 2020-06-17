@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 01:38:40 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/16 16:16:11 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/17 03:39:17 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void		ft_clean(t_pft *one)
 	one->display = 0;
 	one->p1 = 1;
 	one->p2 = 1;
+	one->point = 0;
 	one->pres1neg = 0;
 	one->pres2 = 0;
 	one->pres2neg = 0;
@@ -37,17 +38,22 @@ void		ft_errors(const char *s, t_pft *one)
 	char a;
 	char b;
 
+	if (s[one->index] == '0' && s[one->index + 1] == '-')
+		one->index += 1;
 	a = s[one->index];
 	b = s[one->index + 2];
-	while (s[one->index] == s[one->index + 1])
+	while (a == s[one->index + 1] && !ft_checkdisplay(a))
 	{
-		if (s[one->index] == '%' || !ft_checkflag(s[one->index]))
+		if (!ft_checkflag(a))
 			break ;
 		one->index++;
+		a = s[one->index];
 	}
 	while (a == b && s[one->index + 1] == s[one->index + 3])
 	{
-		one->index = one->index + 4;
+		if (ft_checkdisplay(a) || ft_checkdisplay(s[one->index + 1]))
+			break ;
+		one->index += 4;
 		a = s[one->index];
 		b = s[one->index + 2];
 	}
