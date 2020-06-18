@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 00:29:23 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/18 01:28:26 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/18 02:09:48 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ void		ft_get_all(const char *s, va_list *ap, t_pft *one)
 
 void		ft_get_pres1(const char *s, va_list *ap, t_pft *one)
 {
+	if (s[one->index] == '0' && s[one->index] <= '9' && s[one->index] >= '0')
+		one->index++;
 	if (s[one->index] == '*')
 	{
 		one->pres1 = va_arg(*ap, int);
@@ -95,19 +97,10 @@ void		ft_get_flag(const char *s, t_pft *one)
 
 void		ft_get_var(const char *s, va_list *ap, t_pft *one)
 {
-	unsigned int x;
-
-	x = 0;
 	if (s[one->index] == 'x')
-	{
-		x = va_arg(*ap, unsigned int);
-		ft_get_puthexa(x, one);
-	}
+		ft_get_puthexa(va_arg(*ap, unsigned int), one);
 	if (s[one->index] == 'X')
-	{
-		x = va_arg(*ap, unsigned int);
-		ft_get_puthexa_maj(x, one);
-	}
+		ft_get_puthexa_maj(va_arg(*ap, unsigned int), one);
 	if (s[one->index] == '%')
 		ft_get_putstr("%", one);
 	if (s[one->index] == 'p')

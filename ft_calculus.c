@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/11 22:57:15 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/18 01:16:14 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/18 02:13:20 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_calculus(t_pft *one)
 	int p1;
 	int p2;
 
-	cp = ft_strlen(one->result) - one->resultneg;
+	cp = ft_strlen(one->result) - one->resultneg + one->null;
 	p1 = (one->pres1neg) ? -one->pres1 : one->pres1;
 	p2 = (one->pres2neg) ? -one->pres2 : one->pres2;
 	(one->pres2neg == 1) ? one->pres2 = 0 : 0;
