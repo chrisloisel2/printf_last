@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 02:00:33 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/18 01:03:41 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/19 19:13:34 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,6 @@ int						ft_checkflag(char c);
 void					ft_errors(const char *s, t_pft *one);
 int						ft_checkdisplay(char c);
 void					ft_point_long(unsigned long nb, t_pft *one);
-void					ft_minus_flag(t_pft one);
+void					ft_minus_flag(t_pft *one);
 
 #endif

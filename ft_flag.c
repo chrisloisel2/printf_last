@@ -6,7 +6,7 @@
 /*   By: lchristo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/12 02:08:25 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/17 03:47:32 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/19 19:13:24 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int		ft_checkdisplay(char c)
 	return (0);
 }
 
-void	ft_minus_flag(t_pft one)
+void	ft_minus_flag(t_pft *one)
 {
 	if (one->pres2neg == 0)
 	{
