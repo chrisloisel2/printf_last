@@ -20,27 +20,13 @@ void	ft_flag(t_pft *one)
 		{
 			if (one->resultneg == 1 && one->resaff == 0)
 				ft_cast_min(one);
-			if (one->point == 1)
-				ft_putstr("0x", one);
+			(one->point == 1) ? ft_putstr("0x", one) : 0;
 			while (one->pres2-- > 0 && one->pres2neg == 0)
 				ft_putchar('0', one);
 		}
 	}
 	if (one->flag == '-')
-	{
-		if (one->pres2neg == 0)
-		{
-			if (one->resultneg == 1 && one->resaff == 0)
-			{
-				ft_cast_min(one);
-				one->pres2--;
-			}
-			ft_putstr(one->result + one->decal, one);
-			one->resaff = 1;
-			while (one->pres2-- > 0 && one->pres2neg == 0)
-				ft_putchar(' ', one);
-		}
-	}
+		ft_minus_flag(one);
 }
 
 int		ft_checkflag(char c)
@@ -73,4 +59,20 @@ int		ft_checkdisplay(char c)
 	if (c == '%')
 		return (1);
 	return (0);
+}
+
+void	ft_minus_flag(t_pft one)
+{
+	if (one->pres2neg == 0)
+	{
+		if (one->resultneg == 1 && one->resaff == 0)
+		{
+			ft_cast_min(one);
+			one->pres2--;
+		}
+		ft_putstr(one->result + one->decal, one);
+		one->resaff = 1;
+		while (one->pres2-- > 0 && one->pres2neg == 0)
+			ft_putchar(' ', one);
+	}
 }

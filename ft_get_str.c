@@ -33,7 +33,7 @@ void	ft_get_putstr(char *s, t_pft *one)
 void	ft_get_putchar(char c, t_pft *one)
 {
 	char	string[2];
-	
+
 	if (c == 0)
 		one->null = 1;
 	string[0] = c;

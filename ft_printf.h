@@ -85,6 +85,7 @@ void					ft_fixstr(t_pft *one);
 int						ft_checkflag(char c);
 void					ft_errors(const char *s, t_pft *one);
 int						ft_checkdisplay(char c);
-void					ft_point_long(unsigned long, t_pft *one);
+void					ft_point_long(unsigned long nb, t_pft *one);
+void					ft_minus_flag(t_pft one);
 
 #endif

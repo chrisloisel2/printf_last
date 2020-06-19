@@ -33,8 +33,6 @@ void	ft_putstr(char *s, t_pft *one)
 
 void	ft_putchar(char c, t_pft *one)
 {
-//	if (c == 0)
-//		one->null = 1;
 	write(1, &c, 1);
 	one->cpt++;
 }

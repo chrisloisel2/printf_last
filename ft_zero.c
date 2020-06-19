@@ -21,8 +21,7 @@ void	ft_zero(const char *s, va_list *ap, t_pft *one)
 	{
 		if (one->resultneg == 1 && one->truepres2 < 0)
 			ft_cast_min(one);
-		if (one->flag != 0)
-			ft_flag(one);
+		(one->flag != 0) ? ft_flag(one) : 0;
 		if (one->resaff == 0)
 			ft_putstr(one->result + one->decal, one);
 		while (one->pres1-- > 0)
@@ -34,8 +33,7 @@ void	ft_zero(const char *s, va_list *ap, t_pft *one)
 			ft_cast_min(one);
 		while (one->pres1-- > 0)
 			ft_putchar((one->truepres2 < 0 || one->p2 == 0) ? '0' : ' ', one);
-		if (one->flag != 0)
-			ft_flag(one);
+		(one->flag != 0) ? ft_flag(one) : 0;
 		if (one->resaff == 0)
 			ft_putstr(one->result + one->decal, one);
 	}

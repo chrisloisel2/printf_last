@@ -15,11 +15,9 @@
 void	ft_calculus(t_pft *one)
 {
 	int cp;
-	int p1;
 	int p2;
 
 	cp = ft_strlen(one->result) - one->resultneg + one->null;
-	p1 = (one->pres1neg) ? -one->pres1 : one->pres1;
 	p2 = (one->pres2neg) ? -one->pres2 : one->pres2;
 	(one->pres2neg == 1) ? one->pres2 = 0 : 0;
 	if (cp < one->pres1 || cp < one->pres2)
