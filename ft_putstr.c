@@ -21,8 +21,10 @@ void	ft_putstr(char *s, t_pft *one)
 		ft_putstr("(null)", one);
 	else
 	{
-		while (s[i] != '\0')
+		while (s[i] != '\0' || one->null == 1)
 		{
+			if (one->null == 1)
+				one->null = 0;
 			ft_putchar(s[i], one);
 			i++;
 		}
@@ -31,8 +33,8 @@ void	ft_putstr(char *s, t_pft *one)
 
 void	ft_putchar(char c, t_pft *one)
 {
-	if (c == 0)
-		one->null = 1;
+//	if (c == 0)
+//		one->null = 1;
 	write(1, &c, 1);
 	one->cpt++;
 }

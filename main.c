@@ -6,7 +6,7 @@
 /*   By: lchristo </var/mail/lchristo>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/29 14:43:27 by lchristo          #+#    #+#             */
-/*   Updated: 2020/06/18 01:40:04 by lchristo         ###   ########.fr       */
+/*   Updated: 2020/06/19 15:34:52 by lchristo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -171,26 +171,26 @@ int		pct_5wljzp(void){return test("%-05%");}
 	char c = NULL;
 
 
-	ft_printf("(%-5%)\n", str);	
-	printf("(%-5%)\n", str);	
+//	ft_printf("(%-5%)\n", str);	
+//	printf("(%-5%)\n", str);	
+//	printf("\n");
+//	ft_printf("-0(%-05%)\n", str);	
+//	printf("-0(%-05%)\n", str);	
+//	printf("\n");
+//	ft_printf("(%05%)\n", str);	
+//	printf("(%05%)\n", str);	
+//	printf("\n");
+//	ft_printf("(%-5%)\n", str);	
+//	printf("(%-5%)\n", str);	
+//	printf("\n");
+//	ft_printf("(%5%)\n", str);	
+//	printf("(%5%)\n", str);	
+//	printf("\n");
+	ft_printf("a1(%-5c)\n", '\0');	
+	printf("a2(%-5c)\n", '\0');	
 	printf("\n");
-	ft_printf("-0(%-05%)\n", str);	
-	printf("-0(%-05%)\n", str);	
-	printf("\n");
-	ft_printf("(%05%)\n", str);	
-	printf("(%05%)\n", str);	
-	printf("\n");
-	ft_printf("(%-5%)\n", str);	
-	printf("(%-5%)\n", str);	
-	printf("\n");
-	ft_printf("(%5%)\n", str);	
-	printf("(%5%)\n", str);	
-	printf("\n");
-	ft_printf("(%-5c)\n", str);	
-	printf("(%-5c)\n", str);	
-	printf("\n");
-	ft_printf("(%5c)\n", str);	
-	printf("(%5c)\n", str);	
+	ft_printf("b1(%5c)\n", '\0');	
+	printf("b2(%5c)\n", '\0');	
 	printf("\n");
 /*	ft_printf("%s\n", str);	
 	printf("%s\n", str);	
@@ -232,5 +232,6 @@ int		pct_5wljzp(void){return test("%-05%");}
 	printf("(%09s)\n", s_hidden);
 	printf("\n");
 */
+	while (1);
 	return (0);
 }

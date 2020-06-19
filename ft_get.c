@@ -30,7 +30,7 @@ void		ft_get_all(const char *s, va_list *ap, t_pft *one)
 
 void		ft_get_pres1(const char *s, va_list *ap, t_pft *one)
 {
-	if (s[one->index] == '0' && s[one->index] <= '9' && s[one->index] >= '0')
+	if (s[one->index] == '0' && s[one->index + 1] <= '9' && s[one->index + 1] >= '0')
 		one->index++;
 	if (s[one->index] == '*')
 	{
